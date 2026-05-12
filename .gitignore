@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# npm (in case you ever add build tools)
+node_modules/
+dist/
+.npm
+
+# Environment / secrets — NEVER commit these
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Renard — Bistro Montréalais</title>
+  <meta name="description" content="Café Renard — cuisine du marché, café de spécialité, ambiance chaleureuse au cœur de Montréal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-fox">🦊</span>
+        <div class="logo-text">
+          <span class="logo-name">Café Renard</span>
+          <span class="logo-sub" data-fr="Bistro Montréalais" data-en="Montréal Bistro">Bistro Montréalais</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about"   data-fr="Notre histoire" data-en="Our story">Notre histoire</a></li>
+        <li><a href="#menu"    data-fr="Menu"            data-en="Menu">Menu</a></li>
+        <li><a href="#hours"   data-fr="Horaires"        data-en="Hours">Horaires</a></li>
+        <li><a href="#contact" data-fr="Contact"         data-en="Contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="lang-btn" aria-label="Switch language">EN</button>
+        <a href="#contact" class="btn-pill" data-fr="Réserver" data-en="Reserve">Réserver</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#about"   data-fr="Notre histoire" data-en="Our story">Notre histoire</a>
+      <a href="#menu"    data-fr="Menu"            data-en="Menu">Menu</a>
+      <a href="#hours"   data-fr="Horaires"        data-en="Hours">Horaires</a>
+      <a href="#contact" data-fr="Contact"         data-en="Contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow" data-fr="Bistro &amp; Café · Montréal" data-en="Bistro &amp; Café · Montréal">Bistro &amp; Café · Montréal</p>
+      <h1 data-fr="Une table au<br>cœur de Montréal" data-en="A table at the<br>heart of Montréal">Une table au<br>cœur de Montréal</h1>
+      <p class="hero-sub" data-fr="Cuisine du marché, café de spécialité, ambiance chaleureuse." data-en="Market cuisine, specialty coffee, warm atmosphere.">Cuisine du marché, café de spécialité, ambiance chaleureuse.</p>
+      <div class="hero-btns">
+        <a href="#menu"    class="btn-primary"   data-fr="Voir le menu"       data-en="See the menu">Voir le menu</a>
+        <a href="#contact" class="btn-secondary" data-fr="Réserver une table" data-en="Book a table">Réserver une table</a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down"><span class="scroll-dot"></span></a>
+  </section>
+
+  <section id="about">
+    <div class="about-wrap">
+      <div class="about-img-col">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Café Renard coffee" loading="lazy">
+        <div class="year-badge">
+          <span class="year-num">2012</span>
+          <span class="year-lbl" data-fr="Fondé" data-en="Founded">Fondé</span>
+        </div>
+      </div>
+      <div class="about-text-col reveal">
+        <p class="section-label" data-fr="Notre histoire" data-en="Our story">Notre histoire</p>
+        <h2 data-fr="Nourrir les gens,<br>créer des liens" data-en="Feed people,<br>create connections">Nourrir les gens,<br>créer des liens</h2>
+        <p class="about-body"
+           data-fr="Depuis 2012, Café Renard accueille les gens du quartier autour d'une table simple : de bons produits, une cuisine honnête, et un café préparé avec soin. Nous travaillons avec des producteurs locaux pour vous offrir le meilleur de chaque saison."
+           data-en="Since 2012, Café Renard has welcomed neighbourhood regulars around a simple table: good ingredients, honest cooking, and coffee prepared with care. We partner with local producers to bring you the best of every season.">
+          Depuis 2012, Café Renard accueille les gens du quartier autour d'une table simple : de bons produits, une cuisine honnête, et un café préparé avec soin. Nous travaillons avec des producteurs locaux pour vous offrir le meilleur de chaque saison.
+        </p>
+        <div class="features">
+          <div class="feature"><span class="feat-icon">🌿</span><div><strong data-fr="Produits locaux" data-en="Local produce">Produits locaux</strong><span data-fr="Sourcés au Québec" data-en="Sourced in Québec">Sourcés au Québec</span></div></div>
+          <div class="feature"><span class="feat-icon">☕</span><div><strong data-fr="Café de spécialité" data-en="Specialty coffee">Café de spécialité</strong><span data-fr="Torréfaction artisanale" data-en="Artisan roast">Torréfaction artisanale</span></div></div>
+          <div class="feature"><span class="feat-icon">🍷</span><div><strong data-fr="Brunch &amp; Dîner" data-en="Brunch &amp; Dinner">Brunch &amp; Dîner</strong><span data-fr="7 jours sur 7" data-en="Open every day">7 jours sur 7</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="section-header reveal">
+      <p class="section-label" data-fr="Notre carte" data-en="Our menu">Notre carte</p>
+      <h2 data-fr="Ce qui nous rend fiers" data-en="What we take pride in">Ce qui nous rend fiers</h2>
+    </div>
+    <div class="menu-tabs" role="tablist">
+      <button class="tab active" data-tab="brunch"   role="tab" data-fr="Brunch"   data-en="Brunch">Brunch</button>
+      <button class="tab"        data-tab="plats"    role="tab" data-fr="Plats"    data-en="Mains">Plats</button>
+      <button class="tab"        data-tab="boissons" role="tab" data-fr="Boissons" data-en="Drinks">Boissons</button>
+      <button class="tab"        data-tab="desserts" role="tab" data-fr="Desserts" data-en="Desserts">Desserts</button>
+    </div>
+    <div class="menu-panels">
+      <div class="panel active" id="tab-brunch" role="tabpanel">
+        <div class="cards">
+          <div class="card"><img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=500&q=80" alt="Œufs bénédictine" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Œufs bénédictine" data-en="Eggs Benedict">Œufs bénédictine</h3><span class="price">16 $</span></div><p data-fr="Jambon fumé maison, sauce hollandaise, brioche grillée" data-en="House smoked ham, hollandaise, toasted brioche">Jambon fumé maison, sauce hollandaise, brioche grillée</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=500&q=80" alt="Pancakes" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Pancakes du marché" data-en="Market Pancakes">Pancakes du marché</h3><span class="price">14 $</span></div><p data-fr="Fruits de saison, sirop d'érable, crème fouettée" data-en="Seasonal fruit, maple syrup, whipped cream">Fruits de saison, sirop d'érable, crème fouettée</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80" alt="Toast avocat" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Toast à l'avocat" data-en="Avocado Toast">Toast à l'avocat</h3><span class="price">13 $</span></div><p data-fr="Sourdough, avocat, œuf poché, graines de sésame" data-en="Sourdough, avocado, poached egg, sesame seeds">Sourdough, avocat, œuf poché, graines de sésame</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&q=80" alt="Bol granola" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Bol granola maison" data-en="House Granola Bowl">Bol granola maison</h3><span class="price">11 $</span></div><p data-fr="Yogourt grec, granola artisanal, miel local, fruits frais" data-en="Greek yogurt, artisan granola, local honey, fresh fruit">Yogourt grec, granola artisanal, miel local, fruits frais</p></div></div>
+        </div>
+      </div>
+      <div class="panel" id="tab-plats" role="tabpanel">
+        <div class="cards">
+          <div class="card"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Salade jardin" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Salade du jardin" data-en="Garden Salad">Salade du jardin</h3><span class="price">17 $</span></div><p data-fr="Légumes du marché, vinaigrette maison, fromage de chèvre" data-en="Market vegetables, house vinaigrette, goat cheese">Légumes du marché, vinaigrette maison, fromage de chèvre</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=80" alt="Saumon" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Saumon du Pacifique" data-en="Pacific Salmon">Saumon du Pacifique</h3><span class="price">24 $</span></div><p data-fr="Saumon grillé, légumes racines, beurre blanc au citron" data-en="Grilled salmon, root vegetables, lemon beurre blanc">Saumon grillé, légumes racines, beurre blanc au citron</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=500&q=80" alt="Pâtes" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Pâtes du moment" data-en="Pasta of the Day">Pâtes du moment</h3><span class="price">19 $</span></div><p data-fr="Pâtes fraîches, sauce crémeuse aux champignons sauvages" data-en="Fresh pasta, creamy wild mushroom sauce">Pâtes fraîches, sauce crémeuse aux champignons sauvages</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Burger" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Burger Renard" data-en="Renard Burger">Burger Renard</h3><span class="price">18 $</span></div><p data-fr="Bœuf local, cheddar affiné, confiture d'oignons, frites maison" data-en="Local beef, aged cheddar, onion jam, house fries">Bœuf local, cheddar affiné, confiture d'oignons, frites maison</p></div></div>
+        </div>
+      </div>
+      <div class="panel" id="tab-boissons" role="tabpanel">
+        <div class="cards drinks-cards">
+          <div class="card drink-card"><div class="drink-icon">☕</div><div class="card-body"><div class="card-row"><h3 data-fr="Espresso" data-en="Espresso">Espresso</h3><span class="price">3.50 $</span></div><p data-fr="Simple ou double, grain sélectionné" data-en="Single or double, selected bean">Simple ou double, grain sélectionné</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🥛</div><div class="card-body"><div class="card-row"><h3 data-fr="Latte maison" data-en="House Latte">Latte maison</h3><span class="price">5.50 $</span></div><p data-fr="Lait local, mousse onctueuse, latte art" data-en="Local milk, silky foam, latte art">Lait local, mousse onctueuse, latte art</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🍵</div><div class="card-body"><div class="card-row"><h3 data-fr="Thé sélection" data-en="Tea Selection">Thé sélection</h3><span class="price">4 $</span></div><p data-fr="7 variétés bio et équitables" data-en="7 organic &amp; fair-trade varieties">7 variétés bio et équitables</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🍊</div><div class="card-body"><div class="card-row"><h3 data-fr="Jus pressé" data-en="Fresh Pressed Juice">Jus pressé</h3><span class="price">6 $</span></div><p data-fr="Orange, pomme-gingembre, ou légumes du marché" data-en="Orange, apple-ginger, or market vegetables">Orange, pomme-gingembre, ou légumes du marché</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🍺</div><div class="card-body"><div class="card-row"><h3 data-fr="Bière locale" data-en="Local Beer">Bière locale</h3><span class="price">8 $</span></div><p data-fr="Sélection tournante de microbrasseries québécoises" data-en="Rotating selection from Québec microbreweries">Sélection tournante de microbrasseries québécoises</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🍷</div><div class="card-body"><div class="card-row"><h3 data-fr="Vin nature" data-en="Natural Wine">Vin nature</h3><span class="price">10 $</span></div><p data-fr="Verre — sélection du sommelier, change chaque semaine" data-en="Glass — sommelier's weekly selection">Verre — sélection du sommelier, change chaque semaine</p></div></div>
+        </div>
+      </div>
+      <div class="panel" id="tab-desserts" role="tabpanel">
+        <div class="cards">
+          <div class="card"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=500&q=80" alt="Crème brûlée" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Crème brûlée" data-en="Crème Brûlée">Crème brûlée</h3><span class="price">9 $</span></div><p data-fr="Vanille de Madagascar, sucre caramélisé à la minute" data-en="Madagascar vanilla, caramelised to order">Vanille de Madagascar, sucre caramélisé à la minute</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80" alt="Tarte" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Tarte du jour" data-en="Tart of the Day">Tarte du jour</h3><span class="price">8 $</span></div><p data-fr="Fruits de saison, pâte brisée maison" data-en="Seasonal fruit, house shortcrust pastry">Fruits de saison, pâte brisée maison</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80" alt="Brownie" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Brownie fondant" data-en="Fudge Brownie">Brownie fondant</h3><span class="price">7 $</span></div><p data-fr="Chocolat 70%, glace vanille artisanale" data-en="70% chocolate, artisan vanilla ice cream">Chocolat 70%, glace vanille artisanale</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=500&q=80" alt="Cheesecake" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Cheesecake aux bleuets" data-en="Blueberry Cheesecake">Cheesecake aux bleuets</h3><span class="price">9 $</span></div><p data-fr="Fromage à la crème, coulis de bleuets du Lac-Saint-Jean" data-en="Cream cheese, wild blueberry coulis from Lac-Saint-Jean">Fromage à la crème, coulis de bleuets du Lac-Saint-Jean</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hours">
+    <div class="hours-wrap">
+      <div class="hours-info reveal">
+        <p class="section-label" data-fr="Nous trouver" data-en="Find us">Nous trouver</p>
+        <h2 data-fr="Horaires &amp;<br>Adresse" data-en="Hours &amp;<br>Address">Horaires &amp;<br>Adresse</h2>
+        <div class="hours-list">
+          <div class="hours-row"><span data-fr="Lundi — Vendredi" data-en="Monday — Friday">Lundi — Vendredi</span><span>7 h — 22 h</span></div>
+          <div class="hours-row"><span data-fr="Samedi" data-en="Saturday">Samedi</span><span>8 h — 23 h</span></div>
+          <div class="hours-row"><span data-fr="Dimanche" data-en="Sunday">Dimanche</span><span>9 h — 21 h</span></div>
+        </div>
+        <div class="address-block">
+          <span class="addr-icon">📍</span>
+          <div class="addr-text">
+            <strong>123 Rue Sainte-Catherine Ouest</strong>
+            <span>Montréal, QC H3B 1B5</span>
+            <a href="tel:+15141234567">+1 (514) 123-4567</a>
+          </div>
+        </div>
+        <div class="transit">
+          <p class="transit-label" data-fr="Accès" data-en="Getting there">Accès</p>
+          <div class="transit-tags">
+            <span>🚇 <span data-fr="Métro Peel" data-en="Peel Metro">Métro Peel</span></span>
+            <span>🚌 <span data-fr="Lignes 15, 24" data-en="Lines 15, 24">Lignes 15, 24</span></span>
+            <span>🚗 <span data-fr="Stationnement" data-en="Parking nearby">Stationnement</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="hours-map">
+        <iframe src="https://maps.google.com/maps?q=rue+sainte-catherine+ouest+montreal&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" title="Carte Café Renard"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-wrap">
+      <div class="contact-header reveal">
+        <p class="section-label" data-fr="Réservations" data-en="Reservations">Réservations</p>
+        <h2 data-fr="Réservez une table" data-en="Book a Table">Réservez une table</h2>
+        <p class="contact-sub" data-fr="Pour les groupes de plus de 8 personnes, appelez-nous directement." data-en="For groups larger than 8, please call us directly.">Pour les groupes de plus de 8 personnes, appelez-nous directement.</p>
+      </div>
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label for="name" data-fr="Nom complet" data-en="Full name">Nom complet</label><input type="text" id="name" name="name" required placeholder="Marie Tremblay"></div>
+          <div class="form-group"><label for="email" data-fr="Courriel" data-en="Email">Courriel</label><input type="email" id="email" name="email" required placeholder="marie@example.com"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="date" data-fr="Date souhaitée" data-en="Preferred date">Date souhaitée</label><input type="date" id="date" name="date" required></div>
+          <div class="form-group"><label for="guests" data-fr="Nombre de personnes" data-en="Number of guests">Nombre de personnes</label><select id="guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+        </div>
+        <div class="form-group"><label for="message" data-fr="Message (optionnel)" data-en="Message (optional)">Message (optionnel)</label><textarea id="message" name="message" rows="3" data-placeholder-fr="Allergies, occasion spéciale, demandes particulières…" data-placeholder-en="Allergies, special occasion, specific requests…" placeholder="Allergies, occasion spéciale, demandes particulières…"></textarea></div>
+        <button type="submit" class="btn-submit"><span data-fr="Envoyer la réservation" data-en="Send reservation">Envoyer la réservation</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <p class="form-success" id="form-success" aria-live="polite" data-fr="✓ Réservation envoyée ! Nous vous confirmerons sous 24 h." data-en="✓ Reservation sent! We'll confirm within 24 h."></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="logo-fox">🦊</span><span class="logo-name">Café Renard</span><p data-fr="Bistro montréalais depuis 2012." data-en="Montréal bistro since 2012.">Bistro montréalais depuis 2012.</p></div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about" data-fr="Notre histoire" data-en="Our story">Notre histoire</a>
+        <a href="#menu" data-fr="Menu" data-en="Menu">Menu</a>
+        <a href="#hours" data-fr="Horaires" data-en="Hours">Horaires</a>
+        <a href="#contact" data-fr="Réservations" data-en="Reservations">Réservations</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom"><p data-fr="© 2024 Café Renard. Tous droits réservés." data-en="© 2024 Café Renard. All rights reserved.">© 2024 Café Renard. Tous droits réservés.</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
