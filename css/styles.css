@@ -7,7 +7,7 @@
   --c-muted:    rgba(240,237,232,.5);
   --c-accent:   #E8C87A;
 
-  --ff-head:    'Syne', system-ui, sans-serif;
+  --ff-head:    'DM Sans', system-ui, sans-serif;
   --ff-body:    'Inter', system-ui, sans-serif;
 
   --nav-h:      64px;
@@ -16,6 +16,11 @@
 
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-h);
+}
+
+:root:lang(zh), :root:lang(zh-Hans) {
+  --ff-head: 'Noto Sans SC', sans-serif;
+  --ff-body: 'Noto Sans SC', sans-serif;
 }
 
 /* ─── RESET ───────────────────────────────────────────── */
@@ -178,12 +183,12 @@ h1 em {
   color: #000;
   font-weight: 700;
   font-size: .9rem;
-  border-radius: 50px;
+  border-radius: 4px;
   font-family: var(--ff-head);
   letter-spacing: .02em;
-  transition: opacity .2s, transform .15s;
+  transition: background .2s;
 }
-.btn-primary:hover { opacity: .9; transform: translateY(-1px); }
+.btn-primary:hover { background: #d4b264; }
 
 .btn-ghost {
   display: inline-flex;
@@ -193,7 +198,7 @@ h1 em {
   color: var(--c-text);
   font-weight: 500;
   font-size: .9rem;
-  border-radius: 50px;
+  border-radius: 4px;
   transition: border-color .2s, background .2s;
 }
 .btn-ghost:hover { border-color: rgba(255,255,255,.3); background: rgba(255,255,255,.04); }
@@ -496,10 +501,10 @@ textarea { resize: vertical; min-height: 90px; }
   font-family: var(--ff-head);
   font-size: .95rem;
   font-weight: 700;
-  border-radius: 8px;
-  transition: opacity .2s, transform .15s;
+  border-radius: 4px;
+  transition: background .2s;
 }
-.btn-submit:hover { opacity: .9; transform: translateY(-1px); }
+.btn-submit:hover { background: #d4b264; }
 
 #form-success {
   margin-top: .9rem;
