@@ -2,9 +2,9 @@
 :root {
   --c-bg:       #0C0C0C;
   --c-surface:  #141414;
-  --c-border:   rgba(255,255,255,.08);
+  --c-border:   rgba(255,255,255,.13);
   --c-text:     #F0EDE8;
-  --c-muted:    rgba(240,237,232,.5);
+  --c-muted:    rgba(240,237,232,.68);
   --c-accent:   #E8C87A;
 
   --ff-head:    'DM Sans', system-ui, sans-serif;
@@ -40,8 +40,8 @@ body {
   overflow-x: hidden;
 }
 h1, h2, h3 { font-family: var(--ff-head); line-height: 1.15; }
-h1 { font-size: clamp(2.4rem, 6vw, 4.8rem); font-weight: 800; }
-h2 { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 700; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.8rem); font-weight: 800; letter-spacing: -.03em; }
+h2 { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 700; letter-spacing: -.02em; }
 h3 { font-size: 1rem; font-weight: 600; }
 p  { line-height: 1.7; color: var(--c-muted); }
 
@@ -98,17 +98,22 @@ p  { line-height: 1.7; color: var(--c-muted); }
 }
 .nav-link:hover { color: var(--c-text); }
 
-#lang-btn {
+#lang-select {
   font-size: .78rem;
   font-weight: 700;
   letter-spacing: .06em;
   color: var(--c-accent);
   border: 1.5px solid rgba(232,200,122,.35);
-  border-radius: 50px;
-  padding: .28rem .8rem;
-  transition: background .2s, color .2s;
+  border-radius: 4px;
+  padding: .28rem .6rem;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
 }
-#lang-btn:hover { background: var(--c-accent); color: #000; border-color: var(--c-accent); }
+#lang-select:hover { background: var(--c-accent); color: #000; border-color: var(--c-accent); }
+#lang-select option { background: #141414; color: #F0EDE8; }
 
 /* ─── HERO ────────────────────────────────────────────── */
 #hero {

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café Renard — Bistro Montréalais</title>
-  <meta name="description" content="Café Renard — cuisine du marché, café de spécialité, ambiance chaleureuse au cœur de Montréal.">
+  <title>Café Gazon — Bistro Montréalais</title>
+  <meta name="description" content="Café Gazon — cuisine du marché, café de spécialité, ambiance chaleureuse au cœur de Montréal.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,9 +15,9 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#" class="logo">
-        <span class="logo-fox">🦊</span>
+        <span class="logo-fox">🌿</span>
         <div class="logo-text">
-          <span class="logo-name">Café Renard</span>
+          <span class="logo-name">Café Gazon</span>
           <span class="logo-sub" data-fr="Bistro Montréalais" data-en="Montréal Bistro">Bistro Montréalais</span>
         </div>
       </a>
@@ -28,7 +28,10 @@
         <li><a href="#contact" data-fr="Contact"         data-en="Contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
-        <button id="lang-btn" aria-label="Switch language">EN</button>
+        <select id="lang-select" aria-label="Language">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+        </select>
         <a href="#contact" class="btn-pill" data-fr="Réserver" data-en="Reserve">Réserver</a>
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -52,7 +55,7 @@
       <p class="hero-sub" data-fr="Cuisine du marché, café de spécialité, ambiance chaleureuse." data-en="Market cuisine, specialty coffee, warm atmosphere.">Cuisine du marché, café de spécialité, ambiance chaleureuse.</p>
       <div class="hero-btns">
         <a href="#menu"    class="btn-primary"   data-fr="Voir le menu"       data-en="See the menu">Voir le menu</a>
-        <a href="#contact" class="btn-secondary" data-fr="Réserver une table" data-en="Book a table">Réserver une table</a>
+        <button class="btn-secondary" id="order-cta" data-fr="Commander en ligne" data-en="Order online">Commander en ligne</button>
       </div>
     </div>
     <a href="#about" class="hero-scroll" aria-label="Scroll down"><span class="scroll-dot"></span></a>
@@ -61,7 +64,7 @@
   <section id="about">
     <div class="about-wrap">
       <div class="about-img-col">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Café Renard coffee" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Café Gazon coffee" loading="lazy">
         <div class="year-badge">
           <span class="year-num">2012</span>
           <span class="year-lbl" data-fr="Fondé" data-en="Founded">Fondé</span>
@@ -71,9 +74,9 @@
         <p class="section-label" data-fr="Notre histoire" data-en="Our story">Notre histoire</p>
         <h2 data-fr="Nourrir les gens,<br>créer des liens" data-en="Feed people,<br>create connections">Nourrir les gens,<br>créer des liens</h2>
         <p class="about-body"
-           data-fr="Depuis 2012, Café Renard accueille les gens du quartier autour d'une table simple : de bons produits, une cuisine honnête, et un café préparé avec soin. Nous travaillons avec des producteurs locaux pour vous offrir le meilleur de chaque saison."
-           data-en="Since 2012, Café Renard has welcomed neighbourhood regulars around a simple table: good ingredients, honest cooking, and coffee prepared with care. We partner with local producers to bring you the best of every season.">
-          Depuis 2012, Café Renard accueille les gens du quartier autour d'une table simple : de bons produits, une cuisine honnête, et un café préparé avec soin. Nous travaillons avec des producteurs locaux pour vous offrir le meilleur de chaque saison.
+           data-fr="Depuis 2012, Café Gazon accueille les gens du quartier autour d'une table simple : de bons produits, une cuisine honnête, et un café préparé avec soin. Nous travaillons avec des producteurs locaux pour vous offrir le meilleur de chaque saison."
+           data-en="Since 2012, Café Gazon has welcomed neighbourhood regulars around a simple table: good ingredients, honest cooking, and coffee prepared with care. We partner with local producers to bring you the best of every season.">
+          Depuis 2012, Café Gazon accueille les gens du quartier autour d'une table simple : de bons produits, une cuisine honnête, et un café préparé avec soin. Nous travaillons avec des producteurs locaux pour vous offrir le meilleur de chaque saison.
         </p>
         <div class="features">
           <div class="feature"><span class="feat-icon">🌿</span><div><strong data-fr="Produits locaux" data-en="Local produce">Produits locaux</strong><span data-fr="Sourcés au Québec" data-en="Sourced in Québec">Sourcés au Québec</span></div></div>
@@ -109,7 +112,7 @@
           <div class="card"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Salade jardin" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Salade du jardin" data-en="Garden Salad">Salade du jardin</h3><span class="price">17 $</span></div><p data-fr="Légumes du marché, vinaigrette maison, fromage de chèvre" data-en="Market vegetables, house vinaigrette, goat cheese">Légumes du marché, vinaigrette maison, fromage de chèvre</p></div></div>
           <div class="card"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=80" alt="Saumon" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Saumon du Pacifique" data-en="Pacific Salmon">Saumon du Pacifique</h3><span class="price">24 $</span></div><p data-fr="Saumon grillé, légumes racines, beurre blanc au citron" data-en="Grilled salmon, root vegetables, lemon beurre blanc">Saumon grillé, légumes racines, beurre blanc au citron</p></div></div>
           <div class="card"><img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=500&q=80" alt="Pâtes" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Pâtes du moment" data-en="Pasta of the Day">Pâtes du moment</h3><span class="price">19 $</span></div><p data-fr="Pâtes fraîches, sauce crémeuse aux champignons sauvages" data-en="Fresh pasta, creamy wild mushroom sauce">Pâtes fraîches, sauce crémeuse aux champignons sauvages</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Burger" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Burger Renard" data-en="Renard Burger">Burger Renard</h3><span class="price">18 $</span></div><p data-fr="Bœuf local, cheddar affiné, confiture d'oignons, frites maison" data-en="Local beef, aged cheddar, onion jam, house fries">Bœuf local, cheddar affiné, confiture d'oignons, frites maison</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Burger" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Burger Gazon" data-en="Gazon Burger">Burger Gazon</h3><span class="price">18 $</span></div><p data-fr="Bœuf local, cheddar affiné, confiture d'oignons, frites maison" data-en="Local beef, aged cheddar, onion jam, house fries">Bœuf local, cheddar affiné, confiture d'oignons, frites maison</p></div></div>
         </div>
       </div>
       <div class="panel" id="tab-boissons" role="tabpanel">
@@ -161,7 +164,7 @@
         </div>
       </div>
       <div class="hours-map">
-        <iframe src="https://maps.google.com/maps?q=rue+sainte-catherine+ouest+montreal&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" title="Carte Café Renard"></iframe>
+        <iframe src="https://maps.google.com/maps?q=rue+sainte-catherine+ouest+montreal&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" title="Carte Café Gazon"></iframe>
       </div>
     </div>
   </section>
@@ -175,7 +178,7 @@
       </div>
       <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
         <div class="form-row">
-          <div class="form-group"><label for="name" data-fr="Nom complet" data-en="Full name">Nom complet</label><input type="text" id="name" name="name" required placeholder="Marie Tremblay"></div>
+          <div class="form-group"><label for="name" data-fr="Nom complet" data-en="Full name">Nom complet</label><input type="text" id="name" name="name" required data-fr="Jean Rev" data-en="John Rev" placeholder="Jean Rev"></div>
           <div class="form-group"><label for="email" data-fr="Courriel" data-en="Email">Courriel</label><input type="email" id="email" name="email" required placeholder="marie@example.com"></div>
         </div>
         <div class="form-row">
@@ -184,14 +187,14 @@
         </div>
         <div class="form-group"><label for="message" data-fr="Message (optionnel)" data-en="Message (optional)">Message (optionnel)</label><textarea id="message" name="message" rows="3" data-placeholder-fr="Allergies, occasion spéciale, demandes particulières…" data-placeholder-en="Allergies, special occasion, specific requests…" placeholder="Allergies, occasion spéciale, demandes particulières…"></textarea></div>
         <button type="submit" class="btn-submit"><span data-fr="Envoyer la réservation" data-en="Send reservation">Envoyer la réservation</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-        <p class="form-success" id="form-success" aria-live="polite" data-fr="✓ Réservation envoyée ! Nous vous confirmerons sous 24 h." data-en="✓ Reservation sent! We'll confirm within 24 h."></p>
+        <p class="form-success" id="form-success" aria-live="polite" data-ok-fr="✓ Réservation envoyée ! Nous vous confirmerons sous 24 h." data-ok-en="✓ Reservation sent! We'll confirm within 24 h."></p>
       </form>
     </div>
   </section>
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand"><span class="logo-fox">🦊</span><span class="logo-name">Café Renard</span><p data-fr="Bistro montréalais depuis 2012." data-en="Montréal bistro since 2012.">Bistro montréalais depuis 2012.</p></div>
+      <div class="footer-brand"><span class="logo-fox">🌿</span><span class="logo-name">Café Gazon</span><p data-fr="Bistro montréalais depuis 2012." data-en="Montréal bistro since 2012.">Bistro montréalais depuis 2012.</p></div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#about" data-fr="Notre histoire" data-en="Our story">Notre histoire</a>
         <a href="#menu" data-fr="Menu" data-en="Menu">Menu</a>
@@ -203,8 +206,51 @@
         <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-bottom"><p data-fr="© 2024 Café Renard. Tous droits réservés." data-en="© 2024 Café Renard. All rights reserved.">© 2024 Café Renard. Tous droits réservés.</p></div>
+    <div class="footer-bottom">
+      <p data-fr="© 2026 Café Gazon. Tous droits réservés." data-en="© 2026 Café Gazon. All rights reserved.">© 2026 Café Gazon. Tous droits réservés.</p>
+      <p class="demo-disclaimer" data-fr="Démonstration — Café Gazon est une entreprise fictive illustrant les services de <a href='../../'>CaptainCTO</a>." data-en="Demo — Café Gazon is a fictional business showcasing <a href='../../'>CaptainCTO</a>'s web services.">Démonstration — Café Gazon est une entreprise fictive illustrant les services de <a href="../../">CaptainCTO</a>.</p>
+    </div>
   </footer>
+
+  <!-- Cart -->
+  <button id="cart-fab" class="cart-fab" aria-label="Voir la commande">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <span id="cart-count" class="cart-count" hidden>0</span>
+  </button>
+  <div id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-hd">
+      <h3 data-fr="Votre commande" data-en="Your order">Votre commande</h3>
+      <button id="cart-close" aria-label="Fermer">&#x2715;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <p class="cart-empty" id="cart-empty" data-fr="Votre panier est vide." data-en="Your cart is empty.">Votre panier est vide.</p>
+    <div id="cart-footer" class="cart-footer" hidden>
+      <div class="cart-total">
+        <span data-fr="Total" data-en="Total">Total</span>
+        <span id="cart-total-val">0 $</span>
+      </div>
+      <form id="order-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <input type="hidden" id="order-items" name="items">
+        <div class="form-group">
+          <label for="o-name" data-fr="Votre nom" data-en="Your name">Votre nom</label>
+          <input type="text" id="o-name" name="name" required data-fr="Jean Rev" data-en="John Rev" placeholder="Jean Rev">
+        </div>
+        <div class="form-group">
+          <label for="o-type" data-fr="Type de commande" data-en="Order type">Type de commande</label>
+          <select id="o-type" name="type">
+            <option value="emporter" data-fr="À emporter" data-en="Takeout">À emporter</option>
+            <option value="place" data-fr="Sur place" data-en="Dine-in">Sur place</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">
+          <span data-fr="Passer la commande" data-en="Place order">Passer la commande</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p id="order-success" data-ok-fr="✓ Commande reçue ! Prête dans 20–30 min." data-ok-en="✓ Order received! Ready in 20–30 min."></p>
+      </form>
+    </div>
+  </div>
+  <div id="cart-overlay" class="cart-overlay"></div>
 
   <script src="js/main.js"></script>
 </body>

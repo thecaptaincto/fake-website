@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CaptainCTO — Sites web pour commerces locaux</title>
-  <meta name="description" content="Sites web professionnels et abordables pour les commerces locaux de Montréal. Bilingues, modernes, livrés en une semaine.">
+  <meta name="description" content="Sites web professionnels et abordables pour les commerces locaux de Montréal. Trilingues, modernes, livrés en une semaine.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -23,7 +23,11 @@
         <a href="#templates" class="nav-link" data-fr="Démos"              data-en="Demos"    data-zh="示例">Démos</a>
         <a href="#how"       class="nav-link" data-fr="Comment ça marche"  data-en="How it works" data-zh="流程">Comment ça marche</a>
         <a href="#contact"   class="nav-link" data-fr="Contact"            data-en="Contact"  data-zh="联系">Contact</a>
-        <button id="lang-btn">EN</button>
+        <select id="lang-select" aria-label="Language">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+        </select>
       </div>
     </div>
   </nav>
@@ -41,8 +45,8 @@
           data-zh="让您的网站<br>真正<em>为您赚钱</em>">Des sites qui font<br><em>travailler</em> votre commerce</h1>
 
       <p class="hero-sub"
-         data-fr="Sites bilingues, modernes et abordables pour les commerces locaux de Montréal. Livré en une semaine."
-         data-en="Bilingual, modern, affordable websites for local Montréal businesses. Delivered in one week."
+         data-fr="Sites trilingues, modernes et abordables pour les commerces locaux de Montréal. Livré en une semaine."
+         data-en="Trilingual, modern, affordable websites for local Montréal businesses. Delivered in one week."
          data-zh="为蒙特利尔本地商家提供专业网站，现代、实惠，一周内交付。支持中、英、法三语。">Sites bilingues, modernes et abordables pour les commerces locaux de Montréal. Livré en une semaine.</p>
 
       <div class="hero-btns">
@@ -58,8 +62,8 @@
 
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-n">$400–600</span>
-          <span class="stat-l" data-fr="site complet" data-en="complete site" data-zh="完整网站">site complet</span>
+          <span class="stat-n">500 $</span>
+          <span class="stat-l" data-fr="à partir de" data-en="starting from" data-zh="起步价">à partir de</span>
         </div>
         <div class="stat-div"></div>
         <div class="stat">
@@ -68,7 +72,7 @@
         </div>
         <div class="stat-div"></div>
         <div class="stat">
-          <span class="stat-n">7 jours</span>
+          <span class="stat-n" data-fr="7 jours" data-en="7 days" data-zh="7天">7 jours</span>
           <span class="stat-l" data-fr="délai de livraison" data-en="delivery time" data-zh="交付时间">délai de livraison</span>
         </div>
       </div>
@@ -115,10 +119,10 @@
               <span class="card-type" data-fr="☕ Café &amp; Bistro" data-en="☕ Café &amp; Bistro" data-zh="☕ 咖啡馆 &amp; 小餐馆">☕ Café &amp; Bistro</span>
               <span class="badge-live" data-fr="Démo live" data-en="Live demo" data-zh="在线示例">Démo live</span>
             </div>
-            <h3>Café Renard</h3>
-            <p data-fr="Menu bilingue par onglets, formulaire de réservation, carte Google Maps."
-               data-en="Bilingual tabbed menu, reservation form, Google Maps embed."
-               data-zh="多语言标签菜单、预订表单、谷歌地图嵌入。">Menu bilingue par onglets, formulaire de réservation, carte Google Maps.</p>
+            <h3>Café Gazon</h3>
+            <p data-fr="Commande en ligne, menu trilingue et design chaleureux — une présence web qui transforme les visiteurs en clients réguliers."
+               data-en="Online ordering, trilingual menu, warm design — a web presence that turns first-time visitors into regulars."
+               data-zh="在线点餐、三语菜单、温馨设计——将访客转化为回头客。">Commande en ligne, menu trilingue et design chaleureux — une présence web qui transforme les visiteurs en clients réguliers.</p>
             <div class="palette">
               <span style="background:#1a1209" title="Espresso"></span>
               <span style="background:#c9963b" title="Gold"></span>
@@ -154,10 +158,10 @@
               <span class="card-type" data-fr="💅 Salon &amp; Spa" data-en="💅 Salon &amp; Spa" data-zh="💅 美发沙龙 &amp; 水疗">💅 Salon &amp; Spa</span>
               <span class="badge-live" data-fr="Démo live" data-en="Live demo" data-zh="在线示例">Démo live</span>
             </div>
-            <h3>Studio Élise</h3>
-            <p data-fr="Liste de services, galerie photos, équipe, prise de rendez-vous."
-               data-en="Service list, photo gallery, team section, appointment booking."
-               data-zh="服务列表、图片展示、团队介绍、在线预约。">Liste de services, galerie photos, équipe, prise de rendez-vous.</p>
+            <h3>Chez Mme Éventail</h3>
+            <p data-fr="Identité visuelle soignée, galerie et réservation en ligne — une première impression qui inspire confiance et fidélise."
+               data-en="Polished visual identity, gallery, and online booking — a first impression that builds trust and keeps clients coming back."
+               data-zh="精致视觉形象、图库及在线预约——一眼建立信任，留住客户。">Identité visuelle soignée, galerie et réservation en ligne — une première impression qui inspire confiance et fidélise.</p>
             <div class="palette">
               <span style="background:#2A2624" title="Charcoal"></span>
               <span style="background:#C4938A" title="Rose"></span>
@@ -385,7 +389,7 @@
       <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
         <div class="form-group">
           <label for="c-name"    data-fr="Votre nom"      data-en="Your name"     data-zh="您的姓名">Votre nom</label>
-          <input type="text"  id="c-name"    name="name"     required placeholder="Marie Tremblay">
+          <input type="text"  id="c-name"    name="name"     required data-fr="Jean Rev" data-en="John Rev" data-zh="简睿" placeholder="Jean Rev">
         </div>
         <div class="form-group">
           <label for="c-biz"     data-fr="Votre commerce" data-en="Your business" data-zh="您的商铺">Votre commerce</label>
@@ -408,9 +412,9 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
         <p id="form-success"
-           data-fr="✓ Message reçu ! Je vous réponds sous 24 h."
-           data-en="✓ Message received! I'll reply within 24 h."
-           data-zh="✓ 已收到消息！我将在24小时内回复。"></p>
+           data-ok-fr="✓ Message reçu ! Je vous réponds sous 24 h."
+           data-ok-en="✓ Message received! I'll reply within 24 h."
+           data-ok-zh="✓ 已收到消息！我将在24小时内回复。"></p>
       </form>
     </div>
   </section>
@@ -423,9 +427,9 @@
         <span class="logo-name">CaptainCTO</span>
       </div>
       <p class="footer-copy"
-         data-fr="© 2024 · Développement web · Montréal, QC"
-         data-en="© 2024 · Web development · Montréal, QC"
-         data-zh="© 2024 · 网页开发 · 蒙特利尔, 魁北克">© 2024 · Développement web · Montréal, QC</p>
+         data-fr="© 2026 · Développement web · Montréal, QC"
+         data-en="© 2026 · Web development · Montréal, QC"
+         data-zh="© 2026 · 网页开发 · 蒙特利尔, 魁北克">© 2026 · Développement web · Montréal, QC</p>
       <nav class="footer-nav">
         <a href="#templates" data-fr="Démos"     data-en="Demos"    data-zh="示例">Démos</a>
         <a href="#how"       data-fr="Processus" data-en="Process"  data-zh="流程">Processus</a>

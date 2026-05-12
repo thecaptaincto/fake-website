@@ -1,7 +1,6 @@
 'use strict';
 
-const LANGS      = ['fr', 'en', 'zh'];
-const NEXT_LABEL = { fr: 'EN', en: '中文', zh: 'FR' };
+const LANGS = ['fr', 'en', 'zh'];
 
 let lang = localStorage.getItem('lang') || 'fr';
 
@@ -9,7 +8,7 @@ function applyLang(l) {
   lang = l;
   localStorage.setItem('lang', l);
   document.documentElement.lang = l === 'zh' ? 'zh-Hans' : l;
-  document.getElementById('lang-btn').textContent = NEXT_LABEL[l];
+  document.getElementById('lang-select').value = l;
 
   document.querySelectorAll('[data-fr]').forEach(el => {
     const val = el.dataset[l];
@@ -24,8 +23,8 @@ function applyLang(l) {
   });
 }
 
-document.getElementById('lang-btn').addEventListener('click', () => {
-  applyLang(LANGS[(LANGS.indexOf(lang) + 1) % LANGS.length]);
+document.getElementById('lang-select').addEventListener('change', e => {
+  applyLang(e.target.value);
 });
 
 /* navbar scroll */
@@ -56,7 +55,7 @@ if (form) {
       });
       if (res.ok) {
         form.reset();
-        success.textContent = success.dataset[lang] || success.dataset.fr;
+        success.textContent = success.dataset['ok' + lang.charAt(0).toUpperCase() + lang.slice(1)] || success.dataset.okFr;
         setTimeout(() => { success.textContent = ''; }, 6000);
       } else {
         span.innerHTML = lang === 'zh' ? '出错了 — 请重试' : lang === 'fr' ? 'Erreur — réessayez' : 'Error — try again';
