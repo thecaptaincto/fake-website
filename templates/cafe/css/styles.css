@@ -11,6 +11,12 @@
   --c-muted:      #7a6351;
   --ff-serif:     'Playfair Display', Georgia, serif;
   --ff-sans:      'Inter', system-ui, sans-serif;
+}
+:root:lang(zh-Hans) {
+  --ff-serif:     'Noto Sans SC', system-ui, sans-serif;
+  --ff-sans:      'Noto Sans SC', system-ui, sans-serif;
+}
+:root {
   --nav-h:        68px;
   --radius:       12px;
   --radius-sm:    8px;

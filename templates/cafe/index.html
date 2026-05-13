@@ -7,7 +7,7 @@
   <meta name="description" content="Café Gazon — cuisine du marché, café de spécialité, ambiance chaleureuse au cœur de Montréal.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,31 +18,32 @@
         <span class="logo-fox">🌿</span>
         <div class="logo-text">
           <span class="logo-name">Café Gazon</span>
-          <span class="logo-sub" data-fr="Bistro Montréalais" data-en="Montréal Bistro">Bistro Montréalais</span>
+          <span class="logo-sub" data-fr="Bistro Montréalais" data-en="Montréal Bistro" data-zh="蒙特利尔小餐馆">Bistro Montréalais</span>
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="#about"   data-fr="Notre histoire" data-en="Our story">Notre histoire</a></li>
-        <li><a href="#menu"    data-fr="Menu"            data-en="Menu">Menu</a></li>
-        <li><a href="#hours"   data-fr="Horaires"        data-en="Hours">Horaires</a></li>
-        <li><a href="#contact" data-fr="Contact"         data-en="Contact">Contact</a></li>
+        <li><a href="#about"   data-fr="Notre histoire" data-en="Our story"  data-zh="我们的故事">Notre histoire</a></li>
+        <li><a href="#menu"    data-fr="Menu"            data-en="Menu"       data-zh="菜单">Menu</a></li>
+        <li><a href="#hours"   data-fr="Horaires"        data-en="Hours"      data-zh="营业时间">Horaires</a></li>
+        <li><a href="#contact" data-fr="Contact"         data-en="Contact"    data-zh="联系">Contact</a></li>
       </ul>
       <div class="nav-actions">
         <select id="lang-select" aria-label="Language">
           <option value="fr">FR</option>
           <option value="en">EN</option>
+          <option value="zh">中文</option>
         </select>
-        <a href="#contact" class="btn-pill" data-fr="Réserver" data-en="Reserve">Réserver</a>
+        <a href="#contact" class="btn-pill" data-fr="Réserver" data-en="Reserve" data-zh="预订">Réserver</a>
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <a href="#about"   data-fr="Notre histoire" data-en="Our story">Notre histoire</a>
-      <a href="#menu"    data-fr="Menu"            data-en="Menu">Menu</a>
-      <a href="#hours"   data-fr="Horaires"        data-en="Hours">Horaires</a>
-      <a href="#contact" data-fr="Contact"         data-en="Contact">Contact</a>
+      <a href="#about"   data-fr="Notre histoire" data-en="Our story"  data-zh="我们的故事">Notre histoire</a>
+      <a href="#menu"    data-fr="Menu"            data-en="Menu"       data-zh="菜单">Menu</a>
+      <a href="#hours"   data-fr="Horaires"        data-en="Hours"      data-zh="营业时间">Horaires</a>
+      <a href="#contact" data-fr="Contact"         data-en="Contact"    data-zh="联系">Contact</a>
     </div>
   </nav>
 
@@ -50,12 +51,12 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="eyebrow" data-fr="Bistro &amp; Café · Montréal" data-en="Bistro &amp; Café · Montréal">Bistro &amp; Café · Montréal</p>
-      <h1 data-fr="Une table au<br>cœur de Montréal" data-en="A table at the<br>heart of Montréal">Une table au<br>cœur de Montréal</h1>
-      <p class="hero-sub" data-fr="Cuisine du marché, café de spécialité, ambiance chaleureuse." data-en="Market cuisine, specialty coffee, warm atmosphere.">Cuisine du marché, café de spécialité, ambiance chaleureuse.</p>
+      <p class="eyebrow" data-fr="Bistro &amp; Café · Montréal" data-en="Bistro &amp; Café · Montréal" data-zh="小餐馆 &amp; 咖啡馆 · 蒙特利尔">Bistro &amp; Café · Montréal</p>
+      <h1 data-fr="Une table au<br>cœur de Montréal" data-en="A table at the<br>heart of Montréal" data-zh="蒙特利尔<br>心脏地带的一张桌">Une table au<br>cœur de Montréal</h1>
+      <p class="hero-sub" data-fr="Cuisine du marché, café de spécialité, ambiance chaleureuse." data-en="Market cuisine, specialty coffee, warm atmosphere." data-zh="时令料理、精品咖啡、温馨氛围。">Cuisine du marché, café de spécialité, ambiance chaleureuse.</p>
       <div class="hero-btns">
-        <a href="#menu"    class="btn-primary"   data-fr="Voir le menu"       data-en="See the menu">Voir le menu</a>
-        <button class="btn-secondary" id="order-cta" data-fr="Commander en ligne" data-en="Order online">Commander en ligne</button>
+        <a href="#menu"    class="btn-primary"   data-fr="Voir le menu"       data-en="See the menu"    data-zh="查看菜单">Voir le menu</a>
+        <button class="btn-secondary" id="order-cta" data-fr="Commander en ligne" data-en="Order online" data-zh="在线点餐">Commander en ligne</button>
       </div>
     </div>
     <a href="#about" class="hero-scroll" aria-label="Scroll down"><span class="scroll-dot"></span></a>
@@ -67,21 +68,22 @@
         <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Café Gazon coffee" loading="lazy">
         <div class="year-badge">
           <span class="year-num">2012</span>
-          <span class="year-lbl" data-fr="Fondé" data-en="Founded">Fondé</span>
+          <span class="year-lbl" data-fr="Fondé" data-en="Founded" data-zh="创立">Fondé</span>
         </div>
       </div>
       <div class="about-text-col reveal">
-        <p class="section-label" data-fr="Notre histoire" data-en="Our story">Notre histoire</p>
-        <h2 data-fr="Nourrir les gens,<br>créer des liens" data-en="Feed people,<br>create connections">Nourrir les gens,<br>créer des liens</h2>
+        <p class="section-label" data-fr="Notre histoire" data-en="Our story" data-zh="我们的故事">Notre histoire</p>
+        <h2 data-fr="Nourrir les gens,<br>créer des liens" data-en="Feed people,<br>create connections" data-zh="以食为媒，<br>以食结缘">Nourrir les gens,<br>créer des liens</h2>
         <p class="about-body"
            data-fr="Depuis 2012, Café Gazon accueille les gens du quartier autour d'une table simple : de bons produits, une cuisine honnête, et un café préparé avec soin. Nous travaillons avec des producteurs locaux pour vous offrir le meilleur de chaque saison."
-           data-en="Since 2012, Café Gazon has welcomed neighbourhood regulars around a simple table: good ingredients, honest cooking, and coffee prepared with care. We partner with local producers to bring you the best of every season.">
+           data-en="Since 2012, Café Gazon has welcomed neighbourhood regulars around a simple table: good ingredients, honest cooking, and coffee prepared with care. We partner with local producers to bring you the best of every season."
+           data-zh="自2012年起，Café Gazon以一张简单的桌子迎接街坊邻居：好食材、真诚的烹饪，以及用心调制的咖啡。我们与本地生产商合作，为您呈现每一季最好的味道。">
           Depuis 2012, Café Gazon accueille les gens du quartier autour d'une table simple : de bons produits, une cuisine honnête, et un café préparé avec soin. Nous travaillons avec des producteurs locaux pour vous offrir le meilleur de chaque saison.
         </p>
         <div class="features">
-          <div class="feature"><span class="feat-icon">🌿</span><div><strong data-fr="Produits locaux" data-en="Local produce">Produits locaux</strong><span data-fr="Sourcés au Québec" data-en="Sourced in Québec">Sourcés au Québec</span></div></div>
-          <div class="feature"><span class="feat-icon">☕</span><div><strong data-fr="Café de spécialité" data-en="Specialty coffee">Café de spécialité</strong><span data-fr="Torréfaction artisanale" data-en="Artisan roast">Torréfaction artisanale</span></div></div>
-          <div class="feature"><span class="feat-icon">🍷</span><div><strong data-fr="Brunch &amp; Dîner" data-en="Brunch &amp; Dinner">Brunch &amp; Dîner</strong><span data-fr="7 jours sur 7" data-en="Open every day">7 jours sur 7</span></div></div>
+          <div class="feature"><span class="feat-icon">🌿</span><div><strong data-fr="Produits locaux"     data-en="Local produce"     data-zh="本地食材">Produits locaux</strong><span data-fr="Sourcés au Québec"       data-en="Sourced in Québec"     data-zh="魁北克出品">Sourcés au Québec</span></div></div>
+          <div class="feature"><span class="feat-icon">☕</span><div><strong data-fr="Café de spécialité"  data-en="Specialty coffee"  data-zh="精品咖啡">Café de spécialité</strong><span data-fr="Torréfaction artisanale" data-en="Artisan roast"          data-zh="手工烘焙">Torréfaction artisanale</span></div></div>
+          <div class="feature"><span class="feat-icon">🍷</span><div><strong data-fr="Brunch &amp; Dîner" data-en="Brunch &amp; Dinner" data-zh="早午餐 &amp; 晚餐">Brunch &amp; Dîner</strong><span data-fr="7 jours sur 7" data-en="Open every day" data-zh="全周营业">7 jours sur 7</span></div></div>
         </div>
       </div>
     </div>
@@ -89,48 +91,48 @@
 
   <section id="menu">
     <div class="section-header reveal">
-      <p class="section-label" data-fr="Notre carte" data-en="Our menu">Notre carte</p>
-      <h2 data-fr="Ce qui nous rend fiers" data-en="What we take pride in">Ce qui nous rend fiers</h2>
+      <p class="section-label" data-fr="Notre carte" data-en="Our menu" data-zh="我们的菜单">Notre carte</p>
+      <h2 data-fr="Ce qui nous rend fiers" data-en="What we take pride in" data-zh="引以为傲的出品">Ce qui nous rend fiers</h2>
     </div>
     <div class="menu-tabs" role="tablist">
-      <button class="tab active" data-tab="brunch"   role="tab" data-fr="Brunch"   data-en="Brunch">Brunch</button>
-      <button class="tab"        data-tab="plats"    role="tab" data-fr="Plats"    data-en="Mains">Plats</button>
-      <button class="tab"        data-tab="boissons" role="tab" data-fr="Boissons" data-en="Drinks">Boissons</button>
-      <button class="tab"        data-tab="desserts" role="tab" data-fr="Desserts" data-en="Desserts">Desserts</button>
+      <button class="tab active" data-tab="brunch"   role="tab" data-fr="Brunch"   data-en="Brunch"   data-zh="早午餐">Brunch</button>
+      <button class="tab"        data-tab="plats"    role="tab" data-fr="Plats"    data-en="Mains"    data-zh="主食">Plats</button>
+      <button class="tab"        data-tab="boissons" role="tab" data-fr="Boissons" data-en="Drinks"   data-zh="饮品">Boissons</button>
+      <button class="tab"        data-tab="desserts" role="tab" data-fr="Desserts" data-en="Desserts" data-zh="甜点">Desserts</button>
     </div>
     <div class="menu-panels">
       <div class="panel active" id="tab-brunch" role="tabpanel">
         <div class="cards">
-          <div class="card"><img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=500&q=80" alt="Œufs bénédictine" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Œufs bénédictine" data-en="Eggs Benedict">Œufs bénédictine</h3><span class="price">16 $</span></div><p data-fr="Jambon fumé maison, sauce hollandaise, brioche grillée" data-en="House smoked ham, hollandaise, toasted brioche">Jambon fumé maison, sauce hollandaise, brioche grillée</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=500&q=80" alt="Pancakes" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Pancakes du marché" data-en="Market Pancakes">Pancakes du marché</h3><span class="price">14 $</span></div><p data-fr="Fruits de saison, sirop d'érable, crème fouettée" data-en="Seasonal fruit, maple syrup, whipped cream">Fruits de saison, sirop d'érable, crème fouettée</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80" alt="Toast avocat" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Toast à l'avocat" data-en="Avocado Toast">Toast à l'avocat</h3><span class="price">13 $</span></div><p data-fr="Sourdough, avocat, œuf poché, graines de sésame" data-en="Sourdough, avocado, poached egg, sesame seeds">Sourdough, avocat, œuf poché, graines de sésame</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&q=80" alt="Bol granola" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Bol granola maison" data-en="House Granola Bowl">Bol granola maison</h3><span class="price">11 $</span></div><p data-fr="Yogourt grec, granola artisanal, miel local, fruits frais" data-en="Greek yogurt, artisan granola, local honey, fresh fruit">Yogourt grec, granola artisanal, miel local, fruits frais</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=500&q=80" alt="Œufs bénédictine" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Œufs bénédictine" data-en="Eggs Benedict" data-zh="班尼迪克蛋">Œufs bénédictine</h3><span class="price">16 $</span></div><p data-fr="Jambon fumé maison, sauce hollandaise, brioche grillée" data-en="House smoked ham, hollandaise, toasted brioche" data-zh="自制烟熏火腿、荷兰酱、烤布里欧修">Jambon fumé maison, sauce hollandaise, brioche grillée</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=500&q=80" alt="Pancakes" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Pancakes du marché" data-en="Market Pancakes" data-zh="时令煎饼">Pancakes du marché</h3><span class="price">14 $</span></div><p data-fr="Fruits de saison, sirop d'érable, crème fouettée" data-en="Seasonal fruit, maple syrup, whipped cream" data-zh="时令水果、枫糖浆、鲜奶油">Fruits de saison, sirop d'érable, crème fouettée</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80" alt="Toast avocat" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Toast à l'avocat" data-en="Avocado Toast" data-zh="牛油果吐司">Toast à l'avocat</h3><span class="price">13 $</span></div><p data-fr="Sourdough, avocat, œuf poché, graines de sésame" data-en="Sourdough, avocado, poached egg, sesame seeds" data-zh="酸面包、牛油果、水波蛋、芝麻">Sourdough, avocat, œuf poché, graines de sésame</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&q=80" alt="Bol granola" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Bol granola maison" data-en="House Granola Bowl" data-zh="自制格兰诺拉碗">Bol granola maison</h3><span class="price">11 $</span></div><p data-fr="Yogourt grec, granola artisanal, miel local, fruits frais" data-en="Greek yogurt, artisan granola, local honey, fresh fruit" data-zh="希腊酸奶、手工格兰诺拉、本地蜂蜜、新鲜水果">Yogourt grec, granola artisanal, miel local, fruits frais</p></div></div>
         </div>
       </div>
       <div class="panel" id="tab-plats" role="tabpanel">
         <div class="cards">
-          <div class="card"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Salade jardin" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Salade du jardin" data-en="Garden Salad">Salade du jardin</h3><span class="price">17 $</span></div><p data-fr="Légumes du marché, vinaigrette maison, fromage de chèvre" data-en="Market vegetables, house vinaigrette, goat cheese">Légumes du marché, vinaigrette maison, fromage de chèvre</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=80" alt="Saumon" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Saumon du Pacifique" data-en="Pacific Salmon">Saumon du Pacifique</h3><span class="price">24 $</span></div><p data-fr="Saumon grillé, légumes racines, beurre blanc au citron" data-en="Grilled salmon, root vegetables, lemon beurre blanc">Saumon grillé, légumes racines, beurre blanc au citron</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=500&q=80" alt="Pâtes" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Pâtes du moment" data-en="Pasta of the Day">Pâtes du moment</h3><span class="price">19 $</span></div><p data-fr="Pâtes fraîches, sauce crémeuse aux champignons sauvages" data-en="Fresh pasta, creamy wild mushroom sauce">Pâtes fraîches, sauce crémeuse aux champignons sauvages</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Burger" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Burger Gazon" data-en="Gazon Burger">Burger Gazon</h3><span class="price">18 $</span></div><p data-fr="Bœuf local, cheddar affiné, confiture d'oignons, frites maison" data-en="Local beef, aged cheddar, onion jam, house fries">Bœuf local, cheddar affiné, confiture d'oignons, frites maison</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1600335895229-6e75511892c8?auto=format&fit=crop&w=500&q=80" alt="Salade jardin" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Salade du jardin" data-en="Garden Salad" data-zh="园蔬沙拉">Salade du jardin</h3><span class="price">17 $</span></div><p data-fr="Légumes du marché, vinaigrette maison, fromage de chèvre" data-en="Market vegetables, house vinaigrette, goat cheese" data-zh="时令蔬菜、自制油醋汁、山羊奶酪">Légumes du marché, vinaigrette maison, fromage de chèvre</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=80" alt="Saumon" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Saumon du Pacifique" data-en="Pacific Salmon" data-zh="太平洋三文鱼">Saumon du Pacifique</h3><span class="price">24 $</span></div><p data-fr="Saumon grillé, légumes racines, beurre blanc au citron" data-en="Grilled salmon, root vegetables, lemon beurre blanc" data-zh="烤三文鱼、根蔬、柠檬奶油汁">Saumon grillé, légumes racines, beurre blanc au citron</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1689793606706-3d5d0bd392fc?auto=format&fit=crop&w=500&q=80" alt="Pâtes" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Pâtes du moment" data-en="Pasta of the Day" data-zh="时令意面">Pâtes du moment</h3><span class="price">19 $</span></div><p data-fr="Pâtes fraîches, sauce crémeuse aux champignons sauvages" data-en="Fresh pasta, creamy wild mushroom sauce" data-zh="新鲜意面、野菇奶油酱">Pâtes fraîches, sauce crémeuse aux champignons sauvages</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Burger" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Burger Gazon" data-en="Gazon Burger" data-zh="Gazon 汉堡">Burger Gazon</h3><span class="price">18 $</span></div><p data-fr="Bœuf local, cheddar affiné, confiture d'oignons, frites maison" data-en="Local beef, aged cheddar, onion jam, house fries" data-zh="本地牛肉、陈年车打芝士、洋葱酱、自制薯条">Bœuf local, cheddar affiné, confiture d'oignons, frites maison</p></div></div>
         </div>
       </div>
       <div class="panel" id="tab-boissons" role="tabpanel">
         <div class="cards drinks-cards">
-          <div class="card drink-card"><div class="drink-icon">☕</div><div class="card-body"><div class="card-row"><h3 data-fr="Espresso" data-en="Espresso">Espresso</h3><span class="price">3.50 $</span></div><p data-fr="Simple ou double, grain sélectionné" data-en="Single or double, selected bean">Simple ou double, grain sélectionné</p></div></div>
-          <div class="card drink-card"><div class="drink-icon">🥛</div><div class="card-body"><div class="card-row"><h3 data-fr="Latte maison" data-en="House Latte">Latte maison</h3><span class="price">5.50 $</span></div><p data-fr="Lait local, mousse onctueuse, latte art" data-en="Local milk, silky foam, latte art">Lait local, mousse onctueuse, latte art</p></div></div>
-          <div class="card drink-card"><div class="drink-icon">🍵</div><div class="card-body"><div class="card-row"><h3 data-fr="Thé sélection" data-en="Tea Selection">Thé sélection</h3><span class="price">4 $</span></div><p data-fr="7 variétés bio et équitables" data-en="7 organic &amp; fair-trade varieties">7 variétés bio et équitables</p></div></div>
-          <div class="card drink-card"><div class="drink-icon">🍊</div><div class="card-body"><div class="card-row"><h3 data-fr="Jus pressé" data-en="Fresh Pressed Juice">Jus pressé</h3><span class="price">6 $</span></div><p data-fr="Orange, pomme-gingembre, ou légumes du marché" data-en="Orange, apple-ginger, or market vegetables">Orange, pomme-gingembre, ou légumes du marché</p></div></div>
-          <div class="card drink-card"><div class="drink-icon">🍺</div><div class="card-body"><div class="card-row"><h3 data-fr="Bière locale" data-en="Local Beer">Bière locale</h3><span class="price">8 $</span></div><p data-fr="Sélection tournante de microbrasseries québécoises" data-en="Rotating selection from Québec microbreweries">Sélection tournante de microbrasseries québécoises</p></div></div>
-          <div class="card drink-card"><div class="drink-icon">🍷</div><div class="card-body"><div class="card-row"><h3 data-fr="Vin nature" data-en="Natural Wine">Vin nature</h3><span class="price">10 $</span></div><p data-fr="Verre — sélection du sommelier, change chaque semaine" data-en="Glass — sommelier's weekly selection">Verre — sélection du sommelier, change chaque semaine</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">☕</div><div class="card-body"><div class="card-row"><h3 data-fr="Espresso" data-en="Espresso" data-zh="意式浓缩">Espresso</h3><span class="price">3.50 $</span></div><p data-fr="Simple ou double, grain sélectionné" data-en="Single or double, selected bean" data-zh="单/双份，精选咖啡豆">Simple ou double, grain sélectionné</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🥛</div><div class="card-body"><div class="card-row"><h3 data-fr="Latte maison" data-en="House Latte" data-zh="自制拿铁">Latte maison</h3><span class="price">5.50 $</span></div><p data-fr="Lait local, mousse onctueuse, latte art" data-en="Local milk, silky foam, latte art" data-zh="本地牛奶、丝滑奶泡、拉花">Lait local, mousse onctueuse, latte art</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🍵</div><div class="card-body"><div class="card-row"><h3 data-fr="Thé sélection" data-en="Tea Selection" data-zh="精选茶">Thé sélection</h3><span class="price">4 $</span></div><p data-fr="7 variétés bio et équitables" data-en="7 organic &amp; fair-trade varieties" data-zh="7种有机公平贸易茶">7 variétés bio et équitables</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🍊</div><div class="card-body"><div class="card-row"><h3 data-fr="Jus pressé" data-en="Fresh Pressed Juice" data-zh="鲜榨果汁">Jus pressé</h3><span class="price">6 $</span></div><p data-fr="Orange, pomme-gingembre, ou légumes du marché" data-en="Orange, apple-ginger, or market vegetables" data-zh="橙汁、苹果姜汁或时蔬汁">Orange, pomme-gingembre, ou légumes du marché</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🍺</div><div class="card-body"><div class="card-row"><h3 data-fr="Bière locale" data-en="Local Beer" data-zh="本地啤酒">Bière locale</h3><span class="price">8 $</span></div><p data-fr="Sélection tournante de microbrasseries québécoises" data-en="Rotating selection from Québec microbreweries" data-zh="魁北克精酿轮换供应">Sélection tournante de microbrasseries québécoises</p></div></div>
+          <div class="card drink-card"><div class="drink-icon">🍷</div><div class="card-body"><div class="card-row"><h3 data-fr="Vin nature" data-en="Natural Wine" data-zh="自然葡萄酒">Vin nature</h3><span class="price">10 $</span></div><p data-fr="Verre — sélection du sommelier, change chaque semaine" data-en="Glass — sommelier's weekly selection" data-zh="单杯——侍酒师每周精选">Verre — sélection du sommelier, change chaque semaine</p></div></div>
         </div>
       </div>
       <div class="panel" id="tab-desserts" role="tabpanel">
         <div class="cards">
-          <div class="card"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=500&q=80" alt="Crème brûlée" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Crème brûlée" data-en="Crème Brûlée">Crème brûlée</h3><span class="price">9 $</span></div><p data-fr="Vanille de Madagascar, sucre caramélisé à la minute" data-en="Madagascar vanilla, caramelised to order">Vanille de Madagascar, sucre caramélisé à la minute</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80" alt="Tarte" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Tarte du jour" data-en="Tart of the Day">Tarte du jour</h3><span class="price">8 $</span></div><p data-fr="Fruits de saison, pâte brisée maison" data-en="Seasonal fruit, house shortcrust pastry">Fruits de saison, pâte brisée maison</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80" alt="Brownie" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Brownie fondant" data-en="Fudge Brownie">Brownie fondant</h3><span class="price">7 $</span></div><p data-fr="Chocolat 70%, glace vanille artisanale" data-en="70% chocolate, artisan vanilla ice cream">Chocolat 70%, glace vanille artisanale</p></div></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=500&q=80" alt="Cheesecake" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Cheesecake aux bleuets" data-en="Blueberry Cheesecake">Cheesecake aux bleuets</h3><span class="price">9 $</span></div><p data-fr="Fromage à la crème, coulis de bleuets du Lac-Saint-Jean" data-en="Cream cheese, wild blueberry coulis from Lac-Saint-Jean">Fromage à la crème, coulis de bleuets du Lac-Saint-Jean</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1615235739538-95040f341ba8?auto=format&fit=crop&w=500&q=80" alt="Crème brûlée" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Crème brûlée" data-en="Crème Brûlée" data-zh="焦糖布丁">Crème brûlée</h3><span class="price">9 $</span></div><p data-fr="Vanille de Madagascar, sucre caramélisé à la minute" data-en="Madagascar vanilla, caramelised to order" data-zh="马达加斯加香草、现焦糖化蔗糖">Vanille de Madagascar, sucre caramélisé à la minute</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1702742322469-36315505728f?auto=format&fit=crop&w=500&q=80" alt="Tarte" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Tarte du jour" data-en="Tart of the Day" data-zh="时令塔">Tarte du jour</h3><span class="price">8 $</span></div><p data-fr="Fruits de saison, pâte brisée maison" data-en="Seasonal fruit, house shortcrust pastry" data-zh="时令水果、自制酥皮">Fruits de saison, pâte brisée maison</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1566855833528-35bcc17ae9ce?auto=format&fit=crop&w=500&q=80" alt="Brownie" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Brownie fondant" data-en="Fudge Brownie" data-zh="熔岩布朗尼">Brownie fondant</h3><span class="price">7 $</span></div><p data-fr="Chocolat 70%, glace vanille artisanale" data-en="70% chocolate, artisan vanilla ice cream" data-zh="70%黑巧克力、手工香草冰淇淋">Chocolat 70%, glace vanille artisanale</p></div></div>
+          <div class="card"><img src="https://images.unsplash.com/photo-1702925614886-50ad13c88d3f?auto=format&fit=crop&w=500&q=80" alt="Cheesecake" loading="lazy"><div class="card-body"><div class="card-row"><h3 data-fr="Cheesecake aux bleuets" data-en="Blueberry Cheesecake" data-zh="蓝莓芝士蛋糕">Cheesecake aux bleuets</h3><span class="price">9 $</span></div><p data-fr="Fromage à la crème, coulis de bleuets du Lac-Saint-Jean" data-en="Cream cheese, wild blueberry coulis from Lac-Saint-Jean" data-zh="奶油芝士、圣让湖野生蓝莓酱">Fromage à la crème, coulis de bleuets du Lac-Saint-Jean</p></div></div>
         </div>
       </div>
     </div>
@@ -139,12 +141,12 @@
   <section id="hours">
     <div class="hours-wrap">
       <div class="hours-info reveal">
-        <p class="section-label" data-fr="Nous trouver" data-en="Find us">Nous trouver</p>
-        <h2 data-fr="Horaires &amp;<br>Adresse" data-en="Hours &amp;<br>Address">Horaires &amp;<br>Adresse</h2>
+        <p class="section-label" data-fr="Nous trouver" data-en="Find us" data-zh="找到我们">Nous trouver</p>
+        <h2 data-fr="Horaires &amp;<br>Adresse" data-en="Hours &amp;<br>Address" data-zh="营业时间<br>&amp; 地址">Horaires &amp;<br>Adresse</h2>
         <div class="hours-list">
-          <div class="hours-row"><span data-fr="Lundi — Vendredi" data-en="Monday — Friday">Lundi — Vendredi</span><span>7 h — 22 h</span></div>
-          <div class="hours-row"><span data-fr="Samedi" data-en="Saturday">Samedi</span><span>8 h — 23 h</span></div>
-          <div class="hours-row"><span data-fr="Dimanche" data-en="Sunday">Dimanche</span><span>9 h — 21 h</span></div>
+          <div class="hours-row"><span data-fr="Lundi — Vendredi" data-en="Monday — Friday" data-zh="周一 — 周五">Lundi — Vendredi</span><span>7 h — 22 h</span></div>
+          <div class="hours-row"><span data-fr="Samedi"           data-en="Saturday"        data-zh="周六">Samedi</span><span>8 h — 23 h</span></div>
+          <div class="hours-row"><span data-fr="Dimanche"         data-en="Sunday"          data-zh="周日">Dimanche</span><span>9 h — 21 h</span></div>
         </div>
         <div class="address-block">
           <span class="addr-icon">📍</span>
@@ -155,11 +157,11 @@
           </div>
         </div>
         <div class="transit">
-          <p class="transit-label" data-fr="Accès" data-en="Getting there">Accès</p>
+          <p class="transit-label" data-fr="Accès" data-en="Getting there" data-zh="交通">Accès</p>
           <div class="transit-tags">
-            <span>🚇 <span data-fr="Métro Peel" data-en="Peel Metro">Métro Peel</span></span>
-            <span>🚌 <span data-fr="Lignes 15, 24" data-en="Lines 15, 24">Lignes 15, 24</span></span>
-            <span>🚗 <span data-fr="Stationnement" data-en="Parking nearby">Stationnement</span></span>
+            <span>🚇 <span data-fr="Métro Peel"       data-en="Peel Metro"     data-zh="皮尔地铁站">Métro Peel</span></span>
+            <span>🚌 <span data-fr="Lignes 15, 24"    data-en="Lines 15, 24"   data-zh="15、24路公交">Lignes 15, 24</span></span>
+            <span>🚗 <span data-fr="Stationnement"    data-en="Parking nearby" data-zh="停车场">Stationnement</span></span>
           </div>
         </div>
       </div>
@@ -172,34 +174,34 @@
   <section id="contact">
     <div class="contact-wrap">
       <div class="contact-header reveal">
-        <p class="section-label" data-fr="Réservations" data-en="Reservations">Réservations</p>
-        <h2 data-fr="Réservez une table" data-en="Book a Table">Réservez une table</h2>
-        <p class="contact-sub" data-fr="Pour les groupes de plus de 8 personnes, appelez-nous directement." data-en="For groups larger than 8, please call us directly.">Pour les groupes de plus de 8 personnes, appelez-nous directement.</p>
+        <p class="section-label" data-fr="Réservations" data-en="Reservations" data-zh="预订">Réservations</p>
+        <h2 data-fr="Réservez une table" data-en="Book a Table" data-zh="预订餐桌">Réservez une table</h2>
+        <p class="contact-sub" data-fr="Pour les groupes de plus de 8 personnes, appelez-nous directement." data-en="For groups larger than 8, please call us directly." data-zh="8人以上团体请直接致电预约。">Pour les groupes de plus de 8 personnes, appelez-nous directement.</p>
       </div>
       <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
         <div class="form-row">
-          <div class="form-group"><label for="name" data-fr="Nom complet" data-en="Full name">Nom complet</label><input type="text" id="name" name="name" required data-fr="Jean Rev" data-en="John Rev" placeholder="Jean Rev"></div>
-          <div class="form-group"><label for="email" data-fr="Courriel" data-en="Email">Courriel</label><input type="email" id="email" name="email" required placeholder="marie@example.com"></div>
+          <div class="form-group"><label for="name" data-fr="Nom complet" data-en="Full name" data-zh="姓名">Nom complet</label><input type="text" id="name" name="name" required data-fr="Jean Rev" data-en="John Rev" data-zh="简睿" placeholder="Jean Rev"></div>
+          <div class="form-group"><label for="email" data-fr="Courriel" data-en="Email" data-zh="电子邮件">Courriel</label><input type="email" id="email" name="email" required placeholder="marie@example.com"></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label for="date" data-fr="Date souhaitée" data-en="Preferred date">Date souhaitée</label><input type="date" id="date" name="date" required></div>
-          <div class="form-group"><label for="guests" data-fr="Nombre de personnes" data-en="Number of guests">Nombre de personnes</label><select id="guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+          <div class="form-group"><label for="date" data-fr="Date souhaitée" data-en="Preferred date" data-zh="期望日期">Date souhaitée</label><input type="date" id="date" name="date" required></div>
+          <div class="form-group"><label for="guests" data-fr="Nombre de personnes" data-en="Number of guests" data-zh="用餐人数">Nombre de personnes</label><select id="guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
         </div>
-        <div class="form-group"><label for="message" data-fr="Message (optionnel)" data-en="Message (optional)">Message (optionnel)</label><textarea id="message" name="message" rows="3" data-placeholder-fr="Allergies, occasion spéciale, demandes particulières…" data-placeholder-en="Allergies, special occasion, specific requests…" placeholder="Allergies, occasion spéciale, demandes particulières…"></textarea></div>
-        <button type="submit" class="btn-submit"><span data-fr="Envoyer la réservation" data-en="Send reservation">Envoyer la réservation</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-        <p class="form-success" id="form-success" aria-live="polite" data-ok-fr="✓ Réservation envoyée ! Nous vous confirmerons sous 24 h." data-ok-en="✓ Reservation sent! We'll confirm within 24 h."></p>
+        <div class="form-group"><label for="message" data-fr="Message (optionnel)" data-en="Message (optional)" data-zh="备注（选填）">Message (optionnel)</label><textarea id="message" name="message" rows="3" data-placeholder-fr="Allergies, occasion spéciale, demandes particulières…" data-placeholder-en="Allergies, special occasion, specific requests…" data-placeholder-zh="过敏、特殊场合、特别要求……" placeholder="Allergies, occasion spéciale, demandes particulières…"></textarea></div>
+        <button type="submit" class="btn-submit"><span data-fr="Envoyer la réservation" data-en="Send reservation" data-zh="发送预订">Envoyer la réservation</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <p class="form-success" id="form-success" aria-live="polite" data-ok-fr="✓ Réservation envoyée ! Nous vous confirmerons sous 24 h." data-ok-en="✓ Reservation sent! We'll confirm within 24 h." data-ok-zh="✓ 预订已发送！我们将在24小时内确认。"></p>
       </form>
     </div>
   </section>
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand"><span class="logo-fox">🌿</span><span class="logo-name">Café Gazon</span><p data-fr="Bistro montréalais depuis 2012." data-en="Montréal bistro since 2012.">Bistro montréalais depuis 2012.</p></div>
+      <div class="footer-brand"><span class="logo-fox">🌿</span><span class="logo-name">Café Gazon</span><p data-fr="Bistro montréalais depuis 2012." data-en="Montréal bistro since 2012." data-zh="蒙特利尔小餐馆，创立于2012年。">Bistro montréalais depuis 2012.</p></div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#about" data-fr="Notre histoire" data-en="Our story">Notre histoire</a>
-        <a href="#menu" data-fr="Menu" data-en="Menu">Menu</a>
-        <a href="#hours" data-fr="Horaires" data-en="Hours">Horaires</a>
-        <a href="#contact" data-fr="Réservations" data-en="Reservations">Réservations</a>
+        <a href="#about"   data-fr="Notre histoire" data-en="Our story"    data-zh="我们的故事">Notre histoire</a>
+        <a href="#menu"    data-fr="Menu"            data-en="Menu"         data-zh="菜单">Menu</a>
+        <a href="#hours"   data-fr="Horaires"        data-en="Hours"        data-zh="营业时间">Horaires</a>
+        <a href="#contact" data-fr="Réservations"    data-en="Reservations" data-zh="预订">Réservations</a>
       </nav>
       <div class="footer-social">
         <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
@@ -207,8 +209,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p data-fr="© 2026 Café Gazon. Tous droits réservés." data-en="© 2026 Café Gazon. All rights reserved.">© 2026 Café Gazon. Tous droits réservés.</p>
-      <p class="demo-disclaimer" data-fr="Démonstration — Café Gazon est une entreprise fictive illustrant les services de <a href='../../'>CaptainCTO</a>." data-en="Demo — Café Gazon is a fictional business showcasing <a href='../../'>CaptainCTO</a>'s web services.">Démonstration — Café Gazon est une entreprise fictive illustrant les services de <a href="../../">CaptainCTO</a>.</p>
+      <p data-fr="© 2026 Café Gazon. Tous droits réservés." data-en="© 2026 Café Gazon. All rights reserved." data-zh="© 2026 Café Gazon. 版权所有。">© 2026 Café Gazon. Tous droits réservés.</p>
+      <p class="demo-disclaimer" data-fr="Démonstration — Café Gazon est une entreprise fictive illustrant les services de <a href='../../'>CaptainCTO</a>." data-en="Demo — Café Gazon is a fictional business showcasing <a href='../../'>CaptainCTO</a>'s web services." data-zh="示范演示 — Café Gazon 是一家虚构企业，展示 <a href='../../'>CaptainCTO</a> 的网站服务。">Démonstration — Café Gazon est une entreprise fictive illustrant les services de <a href="../../">CaptainCTO</a>.</p>
     </div>
   </footer>
 
@@ -219,34 +221,34 @@
   </button>
   <div id="cart-drawer" class="cart-drawer" aria-hidden="true">
     <div class="cart-hd">
-      <h3 data-fr="Votre commande" data-en="Your order">Votre commande</h3>
+      <h3 data-fr="Votre commande" data-en="Your order" data-zh="您的订单">Votre commande</h3>
       <button id="cart-close" aria-label="Fermer">&#x2715;</button>
     </div>
     <div id="cart-items" class="cart-items"></div>
-    <p class="cart-empty" id="cart-empty" data-fr="Votre panier est vide." data-en="Your cart is empty.">Votre panier est vide.</p>
+    <p class="cart-empty" id="cart-empty" data-fr="Votre panier est vide." data-en="Your cart is empty." data-zh="购物车为空。">Votre panier est vide.</p>
     <div id="cart-footer" class="cart-footer" hidden>
       <div class="cart-total">
-        <span data-fr="Total" data-en="Total">Total</span>
+        <span data-fr="Total" data-en="Total" data-zh="总计">Total</span>
         <span id="cart-total-val">0 $</span>
       </div>
       <form id="order-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
         <input type="hidden" id="order-items" name="items">
         <div class="form-group">
-          <label for="o-name" data-fr="Votre nom" data-en="Your name">Votre nom</label>
-          <input type="text" id="o-name" name="name" required data-fr="Jean Rev" data-en="John Rev" placeholder="Jean Rev">
+          <label for="o-name" data-fr="Votre nom" data-en="Your name" data-zh="您的姓名">Votre nom</label>
+          <input type="text" id="o-name" name="name" required data-fr="Jean Rev" data-en="John Rev" data-zh="简睿" placeholder="Jean Rev">
         </div>
         <div class="form-group">
-          <label for="o-type" data-fr="Type de commande" data-en="Order type">Type de commande</label>
+          <label for="o-type" data-fr="Type de commande" data-en="Order type" data-zh="订单类型">Type de commande</label>
           <select id="o-type" name="type">
-            <option value="emporter" data-fr="À emporter" data-en="Takeout">À emporter</option>
-            <option value="place" data-fr="Sur place" data-en="Dine-in">Sur place</option>
+            <option value="emporter" data-fr="À emporter" data-en="Takeout"  data-zh="外带">À emporter</option>
+            <option value="place"    data-fr="Sur place"  data-en="Dine-in"  data-zh="堂食">Sur place</option>
           </select>
         </div>
         <button type="submit" class="btn-submit">
-          <span data-fr="Passer la commande" data-en="Place order">Passer la commande</span>
+          <span data-fr="Passer la commande" data-en="Place order" data-zh="提交订单">Passer la commande</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
-        <p id="order-success" data-ok-fr="✓ Commande reçue ! Prête dans 20–30 min." data-ok-en="✓ Order received! Ready in 20–30 min."></p>
+        <p id="order-success" data-ok-fr="✓ Commande reçue ! Prête dans 20–30 min." data-ok-en="✓ Order received! Ready in 20–30 min." data-ok-zh="✓ 订单已收到！将在20–30分钟内准备好。"></p>
       </form>
     </div>
   </div>

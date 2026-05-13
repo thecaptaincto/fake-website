@@ -1,11 +1,11 @@
 'use strict';
-const LANGS = ['fr', 'en'];
+const LANGS = ['fr', 'en', 'zh'];
 let lang = (() => { const l = localStorage.getItem('lang'); return LANGS.includes(l) ? l : 'fr'; })();
 
 function applyLang(l) {
   lang = l;
   localStorage.setItem('lang', l);
-  document.documentElement.lang = l;
+  document.documentElement.lang = l === 'zh' ? 'zh-Hans' : l;
   document.getElementById('lang-select').value = l;
   document.querySelectorAll('[data-fr]').forEach(el => {
     const val = el.dataset[l];
@@ -98,7 +98,7 @@ function renderCart() {
   cartCountEl.hidden = count === 0;
   const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
   cartItemsEl.innerHTML = cart.map(item => {
-    const name = lang === 'fr' ? item.nameFr : item.nameEn;
+    const name = lang === 'zh' ? (item.nameZh || item.nameFr) : lang === 'fr' ? item.nameFr : item.nameEn;
     return `<div class="cart-item">
       <span class="ci-name">${name}</span>
       <span class="ci-qty">&times;${item.qty}</span>
@@ -112,15 +112,15 @@ function renderCart() {
   const orderItemsEl = document.getElementById('order-items');
   if (orderItemsEl) {
     orderItemsEl.value = cart.map(i =>
-      `${lang === 'fr' ? i.nameFr : i.nameEn} x${i.qty} = ${(i.price * i.qty).toFixed(2)} $`
+      `${lang === 'zh' ? (i.nameZh || i.nameFr) : lang === 'fr' ? i.nameFr : i.nameEn} x${i.qty} = ${(i.price * i.qty).toFixed(2)} $`
     ).join('\n') + `\nTotal : ${total.toFixed(2)} $`;
   }
 }
 
-function cartAdd(nameFr, nameEn, price) {
+function cartAdd(nameFr, nameEn, price, nameZh) {
   const ex = cart.find(i => i.nameFr === nameFr);
   if (ex) ex.qty++;
-  else cart.push({ nameFr, nameEn, price: parseFloat(price), qty: 1 });
+  else cart.push({ nameFr, nameEn, nameZh: nameZh || nameFr, price: parseFloat(price), qty: 1 });
   renderCart();
 }
 
@@ -136,14 +136,16 @@ document.querySelectorAll('.panel .card').forEach(card => {
   if (!h3 || !priceEl) return;
   const nameFr = h3.dataset.fr || h3.textContent.trim();
   const nameEn = h3.dataset.en || h3.textContent.trim();
+  const nameZh = h3.dataset.zh || nameFr;
   const price  = parseFloat(priceEl.textContent.replace(/[^0-9.]/g, ''));
   if (isNaN(price)) return;
   const btn = document.createElement('button');
   btn.className = 'btn-add';
   btn.dataset.fr = 'Ajouter';
   btn.dataset.en = 'Add';
+  btn.dataset.zh = '添加';
   btn.textContent = 'Ajouter';
-  btn.addEventListener('click', () => { cartAdd(nameFr, nameEn, price); openCart(); });
+  btn.addEventListener('click', () => { cartAdd(nameFr, nameEn, price, nameZh); openCart(); });
   card.querySelector('.card-body').appendChild(btn);
 });
 
@@ -157,7 +159,7 @@ if (orderForm) {
     const span = btn.querySelector('span');
     const orig = span.innerHTML;
     btn.disabled = true;
-    span.innerHTML = lang === 'fr' ? 'Envoi…' : 'Sending…';
+    span.innerHTML = lang === 'zh' ? '发送中…' : lang === 'fr' ? 'Envoi…' : 'Sending…';
     try {
       const res = await fetch(orderForm.action, { method: 'POST', body: new FormData(orderForm), headers: { Accept: 'application/json' } });
       if (res.ok) {
@@ -165,8 +167,8 @@ if (orderForm) {
         const key = 'ok' + lang.charAt(0).toUpperCase() + lang.slice(1);
         orderSuccess.textContent = orderSuccess.dataset[key] || orderSuccess.dataset.okFr;
         setTimeout(() => { orderSuccess.textContent = ''; }, 8000);
-      } else { span.innerHTML = lang === 'fr' ? 'Erreur — réessayez' : 'Error — try again'; btn.disabled = false; return; }
-    } catch { span.innerHTML = lang === 'fr' ? 'Erreur réseau' : 'Network error'; btn.disabled = false; return; }
+      } else { span.innerHTML = lang === 'zh' ? '出错 — 请重试' : lang === 'fr' ? 'Erreur — réessayez' : 'Error — try again'; btn.disabled = false; return; }
+    } catch { span.innerHTML = lang === 'zh' ? '网络错误' : lang === 'fr' ? 'Erreur réseau' : 'Network error'; btn.disabled = false; return; }
     span.innerHTML = orig; btn.disabled = false;
   });
 }
@@ -179,7 +181,7 @@ if (form) {
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('.btn-submit'); const span = btn.querySelector('span'); const orig = span.innerHTML;
-    btn.disabled = true; span.innerHTML = lang === 'fr' ? 'Envoi…' : 'Sending…';
+    btn.disabled = true; span.innerHTML = lang === 'zh' ? '发送中…' : lang === 'fr' ? 'Envoi…' : 'Sending…';
     try {
       const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
       if (res.ok) {
@@ -187,8 +189,8 @@ if (form) {
         const key = 'ok' + lang.charAt(0).toUpperCase() + lang.slice(1);
         success.textContent = success.dataset[key] || success.dataset.okFr;
         setTimeout(() => { success.textContent = ''; }, 6000);
-      } else { span.innerHTML = lang === 'fr' ? 'Erreur — réessayez' : 'Error — try again'; btn.disabled = false; return; }
-    } catch { span.innerHTML = lang === 'fr' ? 'Erreur réseau' : 'Network error'; btn.disabled = false; return; }
+      } else { span.innerHTML = lang === 'zh' ? '出错 — 请重试' : lang === 'fr' ? 'Erreur — réessayez' : 'Error — try again'; btn.disabled = false; return; }
+    } catch { span.innerHTML = lang === 'zh' ? '网络错误' : lang === 'fr' ? 'Erreur réseau' : 'Network error'; btn.disabled = false; return; }
     span.innerHTML = orig; btn.disabled = false;
   });
 }

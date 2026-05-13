@@ -1,11 +1,11 @@
 'use strict';
-const LANGS = ['fr', 'en'];
+const LANGS = ['fr', 'en', 'zh'];
 let lang = (() => { const l = localStorage.getItem('lang'); return LANGS.includes(l) ? l : 'fr'; })();
 
 function applyLang(l) {
   lang = l;
   localStorage.setItem('lang', l);
-  document.documentElement.lang = l;
+  document.documentElement.lang = l === 'zh' ? 'zh-Hans' : l;
   document.getElementById('lang-select').value = l;
   document.querySelectorAll('[data-fr]').forEach(el => {
     const val = el.dataset[l];
@@ -57,7 +57,7 @@ if (form) {
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('.btn-submit'); const span = btn.querySelector('span'); const orig = span.innerHTML;
-    btn.disabled = true; span.innerHTML = lang === 'fr' ? 'Envoi…' : 'Sending…';
+    btn.disabled = true; span.innerHTML = lang === 'zh' ? '发送中…' : lang === 'fr' ? 'Envoi…' : 'Sending…';
     try {
       const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
       if (res.ok) {
@@ -65,8 +65,8 @@ if (form) {
         const key = 'ok' + lang.charAt(0).toUpperCase() + lang.slice(1);
         success.textContent = success.dataset[key] || success.dataset.okFr;
         setTimeout(() => { success.textContent = ''; }, 6000);
-      } else { span.innerHTML = lang === 'fr' ? 'Erreur — réessayez' : 'Error — try again'; btn.disabled = false; return; }
-    } catch { span.innerHTML = lang === 'fr' ? 'Erreur réseau' : 'Network error'; btn.disabled = false; return; }
+      } else { span.innerHTML = lang === 'zh' ? '出错 — 请重试' : lang === 'fr' ? 'Erreur — réessayez' : 'Error — try again'; btn.disabled = false; return; }
+    } catch { span.innerHTML = lang === 'zh' ? '网络错误' : lang === 'fr' ? 'Erreur réseau' : 'Network error'; btn.disabled = false; return; }
     span.innerHTML = orig; btn.disabled = false;
   });
 }
