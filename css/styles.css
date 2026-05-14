@@ -229,6 +229,10 @@ h1 em {
   color: var(--c-muted);
   letter-spacing: .04em;
 }
+.stat-price {
+  color: var(--c-accent);
+  font-size: 2rem;
+}
 .stat-div {
   width: 1px;
   height: 36px;
