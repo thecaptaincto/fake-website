@@ -7,7 +7,7 @@
   <meta name="description" content="Sites web professionnels et abordables pour les commerces locaux de Montréal. Trilingues, modernes, livrés en une semaine.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,18 +16,19 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#" class="logo">
-        <span class="logo-mark">⚓</span>
-        <span class="logo-name">CaptainCTO</span>
+        <span class="logo-name">CAPTAINCTO</span>
       </a>
+      <ul class="nav-links">
+        <li><a href="#templates" class="nav-link" data-fr="Démos"             data-en="Demos"        data-zh="示例">Démos</a></li>
+        <li><a href="#how"       class="nav-link" data-fr="Comment ça marche" data-en="How it works" data-zh="流程">Comment ça marche</a></li>
+      </ul>
       <div class="nav-actions">
-        <a href="#templates" class="nav-link" data-fr="Démos"              data-en="Demos"    data-zh="示例">Démos</a>
-        <a href="#how"       class="nav-link" data-fr="Comment ça marche"  data-en="How it works" data-zh="流程">Comment ça marche</a>
-        <a href="#contact"   class="nav-link" data-fr="Contact"            data-en="Contact"  data-zh="联系">Contact</a>
-        <select id="lang-select" aria-label="Language">
-          <option value="fr">FR</option>
-          <option value="en">EN</option>
-          <option value="zh">中文</option>
-        </select>
+        <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="zh">中</button>
+        </div>
+        <a href="#contact" class="btn-nav-cta" data-fr="Me contacter" data-en="Get in touch" data-zh="联系我">Me contacter</a>
         <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -37,6 +38,11 @@
       <a href="#templates" data-fr="Démos"             data-en="Demos"        data-zh="示例">Démos</a>
       <a href="#how"       data-fr="Comment ça marche" data-en="How it works" data-zh="流程">Comment ça marche</a>
       <a href="#contact"   data-fr="Contact"           data-en="Contact"      data-zh="联系">Contact</a>
+      <div class="mobile-lang">
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
     </div>
   </nav>
 
@@ -73,7 +79,7 @@
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-l" data-fr="à partir de" data-en="starting from" data-zh="起步价">à partir de</span>
-          <span class="stat-n stat-price">500 $</span>
+          <span class="stat-n stat-price" data-count-to="500">500 $</span>
         </div>
         <div class="stat-div"></div>
         <div class="stat">
@@ -88,6 +94,26 @@
       </div>
     </div>
   </header>
+
+  <!-- ── TICKER STRIP ─────────────────────────────────── -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Sites web professionnels</span><span class="ticker-sep">✦</span>
+      <span>FR · EN · 中文</span><span class="ticker-sep">✦</span>
+      <span>Livré en 7 jours</span><span class="ticker-sep">✦</span>
+      <span>À partir de 500 $</span><span class="ticker-sep">✦</span>
+      <span>Montréal, Québec</span><span class="ticker-sep">✦</span>
+      <span>Commerce local</span><span class="ticker-sep">✦</span>
+      <span>Design moderne</span><span class="ticker-sep">✦</span>
+      <span>Sites web professionnels</span><span class="ticker-sep">✦</span>
+      <span>FR · EN · 中文</span><span class="ticker-sep">✦</span>
+      <span>Livré en 7 jours</span><span class="ticker-sep">✦</span>
+      <span>À partir de 500 $</span><span class="ticker-sep">✦</span>
+      <span>Montréal, Québec</span><span class="ticker-sep">✦</span>
+      <span>Commerce local</span><span class="ticker-sep">✦</span>
+      <span>Design moderne</span><span class="ticker-sep">✦</span>
+    </div>
+  </div>
 
   <!-- ── TEMPLATES GRID ────────────────────────────────── -->
   <section id="templates">
@@ -433,8 +459,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo-mark">⚓</span>
-        <span class="logo-name">CaptainCTO</span>
+        <span class="logo-name">CAPTAINCTO</span>
       </div>
       <p class="footer-copy"
          data-fr="© 2026 · Développement web · Montréal, QC"

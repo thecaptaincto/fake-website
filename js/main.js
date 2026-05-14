@@ -3,18 +3,23 @@
 document.documentElement.classList.add('js-enabled');
 
 const LANGS = ['fr', 'en', 'zh'];
-
 let lang = localStorage.getItem('lang') || 'fr';
 
 function applyLang(l) {
   lang = l;
   localStorage.setItem('lang', l);
   document.documentElement.lang = l === 'zh' ? 'zh-Hans' : l;
-  document.getElementById('lang-select').value = l;
+
+  const selectEl = document.getElementById('lang-select');
+  if (selectEl) selectEl.value = l;
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === l);
+  });
 
   document.querySelectorAll('[data-fr]').forEach(el => {
     const val = el.dataset[l];
-    if (!val) return; // gracefully keeps current text if no translation yet
+    if (!val) return;
     if (el.tagName === 'INPUT') { el.placeholder = val; return; }
     el.innerHTML = val;
   });
@@ -25,17 +30,20 @@ function applyLang(l) {
   });
 }
 
-document.getElementById('lang-select').addEventListener('change', e => {
-  applyLang(e.target.value);
+const selectEl = document.getElementById('lang-select');
+if (selectEl) selectEl.addEventListener('change', e => applyLang(e.target.value));
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
 
-/* navbar scroll */
+/* ── navbar scroll ────────────────────────────────────── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 10);
 }, { passive: true });
 
-/* contact form */
+/* ── contact form ─────────────────────────────────────── */
 const form    = document.getElementById('contact-form');
 const success = document.getElementById('form-success');
 
@@ -77,8 +85,8 @@ if (form) {
 
 applyLang(lang);
 
-/* main-page hamburger */
-const navHamburger = document.getElementById('nav-hamburger');
+/* ── hamburger menu ───────────────────────────────────── */
+const navHamburger   = document.getElementById('nav-hamburger');
 const mainMobileMenu = document.getElementById('main-mobile-menu');
 if (navHamburger && mainMobileMenu) {
   navHamburger.addEventListener('click', () => {
@@ -95,7 +103,7 @@ if (navHamburger && mainMobileMenu) {
   });
 }
 
-/* scroll reveal */
+/* ── scroll reveal ────────────────────────────────────── */
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -104,10 +112,80 @@ if ('IntersectionObserver' in window) {
         revealObserver.unobserve(e.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  }, { threshold: 0.07, rootMargin: '0px 0px -24px 0px' });
 
-  document.querySelectorAll('.section-top, .step, .tpl-card, .contact-text, #contact-form').forEach(el => {
+  document.querySelectorAll('.section-top, .contact-text, #contact-form').forEach(el => {
     el.classList.add('reveal');
     revealObserver.observe(el);
   });
+
+  /* stagger grids */
+  document.querySelectorAll('.templates-grid, .steps').forEach(el => {
+    el.classList.add('reveal-stagger');
+    revealObserver.observe(el);
+  });
 }
+
+/* ── stat price counter ───────────────────────────────── */
+const priceEl = document.querySelector('.stat-price[data-count-to]');
+if (priceEl) {
+  const target = parseInt(priceEl.dataset.countTo, 10);
+  const duration = 1500;
+  const easeOut = t => 1 - Math.pow(1 - t, 3);
+  priceEl.textContent = '0 $';
+
+  /* start after hero fades in */
+  setTimeout(() => {
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      priceEl.textContent = Math.round(easeOut(p) * target) + ' $';
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }, 900);
+}
+
+/* ── floating particles in hero ───────────────────────── */
+function spawnParticles() {
+  const hero = document.getElementById('hero');
+  if (!hero) return;
+  const colors = [
+    'rgba(201,144,58,',   /* golden wheat */
+    'rgba(196,83,28,',    /* terracotta   */
+    'rgba(220,170,90,',   /* warm gold    */
+  ];
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement('span');
+    p.className = 'hero-particle';
+    const size    = 2 + Math.random() * 3.5;
+    const opacity = 0.09 + Math.random() * 0.2;
+    const color   = colors[Math.floor(Math.random() * colors.length)];
+    p.style.cssText = [
+      `left:${5 + Math.random() * 90}%`,
+      `width:${size}px`,
+      `height:${size}px`,
+      `opacity:${opacity}`,
+      `animation-duration:${10 + Math.random() * 16}s`,
+      `animation-delay:${Math.random() * 12}s`,
+      `background:${color}1)`,
+    ].join(';');
+    hero.appendChild(p);
+  }
+}
+spawnParticles();
+
+/* ── 3D card tilt on hover ────────────────────────────── */
+document.querySelectorAll('.tpl-card.live').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r  = card.getBoundingClientRect();
+    const x  = (e.clientX - r.left)  / r.width  - 0.5;
+    const y  = (e.clientY - r.top)   / r.height - 0.5;
+    card.style.transform   = `perspective(900px) rotateY(${x * 9}deg) rotateX(${-y * 6}deg) translateY(-6px) scale(1.01)`;
+    card.style.transition  = 'transform .06s ease-out';
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform  = '';
+    card.style.transition = 'transform .45s cubic-bezier(.22,1,.36,1)';
+  });
+});
