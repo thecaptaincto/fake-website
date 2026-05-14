@@ -1,5 +1,7 @@
 'use strict';
 
+document.documentElement.classList.add('js-enabled');
+
 const LANGS = ['fr', 'en', 'zh'];
 
 let lang = localStorage.getItem('lang') || 'fr';
@@ -74,3 +76,38 @@ if (form) {
 }
 
 applyLang(lang);
+
+/* main-page hamburger */
+const navHamburger = document.getElementById('nav-hamburger');
+const mainMobileMenu = document.getElementById('main-mobile-menu');
+if (navHamburger && mainMobileMenu) {
+  navHamburger.addEventListener('click', () => {
+    const open = navHamburger.classList.toggle('open');
+    mainMobileMenu.classList.toggle('open', open);
+    navHamburger.setAttribute('aria-expanded', String(open));
+  });
+  mainMobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navHamburger.classList.remove('open');
+      mainMobileMenu.classList.remove('open');
+      navHamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+/* scroll reveal */
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.section-top, .step, .tpl-card, .contact-text, #contact-form').forEach(el => {
+    el.classList.add('reveal');
+    revealObserver.observe(el);
+  });
+}

@@ -546,17 +546,147 @@ footer {
 .footer-nav a { font-size: .82rem; color: var(--c-muted); transition: color .2s; }
 .footer-nav a:hover { color: var(--c-text); }
 
+/* ─── ANIMATIONS ──────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-22px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(80,220,120,.3); }
+  50%       { box-shadow: 0 0 0 6px rgba(80,220,120,0); }
+}
+
+/* Hero orbs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+}
+.hero-orb-1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(232,200,122,.11) 0%, transparent 70%);
+  top: -220px; left: -180px;
+  animation: float 18s ease-in-out infinite;
+}
+.hero-orb-2 {
+  width: 440px; height: 440px;
+  background: radial-gradient(circle, rgba(232,200,122,.07) 0%, transparent 70%);
+  bottom: -120px; right: -100px;
+  animation: float 22s ease-in-out infinite reverse;
+}
+
+/* Hero entrance stagger */
+.hero-inner > * {
+  opacity: 0;
+  animation: fadeUp .75s var(--ease-out) forwards;
+}
+.hero-inner .eyebrow    { animation-delay: .05s; }
+.hero-inner h1          { animation-delay: .2s; }
+.hero-inner .hero-sub   { animation-delay: .35s; }
+.hero-inner .hero-btns  { animation-delay: .5s; }
+.hero-inner .hero-stats { animation-delay: .65s; }
+
+/* Live badge pulse */
+.badge-live { animation: pulse-glow 2.5s ease-in-out infinite; }
+
+/* Scroll reveal (only active when JS is available) */
+.js-enabled .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s var(--ease-out), transform .65s var(--ease-out);
+}
+.js-enabled .reveal.in-view { opacity: 1; transform: none; }
+
+/* Card glow on hover */
+.tpl-card.live:hover {
+  box-shadow: 0 0 0 1px rgba(232,200,122,.18), 0 20px 56px rgba(0,0,0,.55);
+}
+
+/* Step number slightly more visible */
+.step-n { color: rgba(232,200,122,.32); }
+
+/* Main-page hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: .5rem;
+  margin-left: .5rem;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--c-text);
+  border-radius: 2px;
+  transition: transform .25s var(--ease-out), opacity .2s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.main-mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: rgba(12,12,12,.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--c-border);
+  padding: .5rem 1.5rem 1.2rem;
+}
+.main-mobile-menu.open { display: flex; }
+.main-mobile-menu a {
+  padding: .85rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--c-muted);
+  border-bottom: 1px solid var(--c-border);
+  transition: color .2s;
+}
+.main-mobile-menu a:last-child { border-bottom: none; }
+.main-mobile-menu a:hover { color: var(--c-text); }
+
 /* ─── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .templates-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+}
+
 @media (max-width: 900px) {
   .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
   .nav-actions .nav-link { display: none; }
+  .nav-hamburger { display: flex; }
+}
+
+@media (max-width: 768px) {
+  .section-inner { padding: 4.5rem 1.25rem; }
+  #contact { padding: 4.5rem 1.25rem; }
+  h2 { font-size: clamp(1.6rem, 5vw, 2.4rem); }
 }
 
 @media (max-width: 600px) {
-  .hero-stats { gap: 1.5rem; }
+  .hero-stats { gap: 1.2rem; }
   .stat-div   { display: none; }
+  .stat-n     { font-size: 1.25rem; }
   .templates-grid { grid-template-columns: 1fr; }
   .steps      { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-nav { justify-content: center; }
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+  .hero-btns { flex-direction: column; align-items: stretch; padding: 0 1rem; }
+  .nav-inner { padding: 0 1rem; }
+}
+
+@media (max-width: 400px) {
+  h1 { font-size: clamp(2rem, 9vw, 2.4rem); }
+  .section-inner { padding: 3.5rem 1rem; }
+  #contact { padding: 3.5rem 1rem; }
 }

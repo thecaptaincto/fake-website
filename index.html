@@ -28,12 +28,22 @@
           <option value="en">EN</option>
           <option value="zh">中文</option>
         </select>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+    </div>
+    <div class="main-mobile-menu" id="main-mobile-menu">
+      <a href="#templates" data-fr="Démos"             data-en="Demos"        data-zh="示例">Démos</a>
+      <a href="#how"       data-fr="Comment ça marche" data-en="How it works" data-zh="流程">Comment ça marche</a>
+      <a href="#contact"   data-fr="Contact"           data-en="Contact"      data-zh="联系">Contact</a>
     </div>
   </nav>
 
   <!-- ── HERO ──────────────────────────────────────────── -->
   <header id="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
     <div class="hero-inner">
       <p class="eyebrow"
          data-fr="Développeur web · Montréal"
@@ -47,7 +57,7 @@
       <p class="hero-sub"
          data-fr="Sites trilingues, modernes et abordables pour les commerces locaux de Montréal. Livré en une semaine."
          data-en="Trilingual, modern, affordable websites for local Montréal businesses. Delivered in one week."
-         data-zh="为蒙特利尔本地商家提供专业网站，现代、实惠，一周内交付。支持中、英、法三语。">Sites bilingues, modernes et abordables pour les commerces locaux de Montréal. Livré en une semaine.</p>
+         data-zh="为蒙特利尔本地商家提供专业网站，现代、实惠，一周内交付。支持中、英、法三语。">Sites trilingues, modernes et abordables pour les commerces locaux de Montréal. Livré en une semaine.</p>
 
       <div class="hero-btns">
         <a href="#templates" class="btn-primary"
@@ -328,9 +338,9 @@
         <div class="step">
           <span class="step-n">01</span>
           <h3 data-fr="Consultation gratuite" data-en="Free consultation" data-zh="免费咨询">Consultation gratuite</h3>
-          <p data-fr="On se parle 15 minutes — par Zoom ou téléphone. Je comprends votre commerce, votre clientèle, ce que vous voulez."
-             data-en="We talk 15 minutes — by Zoom or phone. I understand your business, your clients, what you need."
-             data-zh="15分钟视频通话或电话沟通，了解您的业务、客户群体和需求。">On se parle 15 minutes — par Zoom ou téléphone. Je comprends votre commerce, votre clientèle, ce que vous voulez.</p>
+          <p data-fr="On se parle 15 minutes, par Zoom ou téléphone. Je comprends votre commerce, votre clientèle, ce que vous voulez."
+             data-en="We talk 15 minutes, by Zoom or phone. I understand your business, your clients, what you need."
+             data-zh="15分钟视频通话或电话沟通，了解您的业务、客户群体和需求。">On se parle 15 minutes, par Zoom ou téléphone. Je comprends votre commerce, votre clientèle, ce que vous voulez.</p>
         </div>
         <div class="step">
           <span class="step-n">02</span>
@@ -393,11 +403,11 @@
         </div>
         <div class="form-group">
           <label for="c-biz"     data-fr="Votre commerce" data-en="Your business" data-zh="您的商铺">Votre commerce</label>
-          <input type="text"  id="c-biz"     name="business" placeholder="Restaurant Chez Marie">
+          <input type="text"  id="c-biz"     name="business" placeholder="Restaurant Chez Jean">
         </div>
         <div class="form-group">
           <label for="c-email"   data-fr="Courriel"       data-en="Email"         data-zh="电子邮件">Courriel</label>
-          <input type="email" id="c-email"   name="email"    required placeholder="marie@example.com">
+          <input type="email" id="c-email"   name="email"    required placeholder="jean@example.com">
         </div>
         <div class="form-group">
           <label for="c-message" data-fr="Message"        data-en="Message"       data-zh="留言">Message</label>
