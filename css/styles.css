@@ -11,8 +11,9 @@
   --c-gold:     #C9903A;              /* golden wheat                 */
   --c-cream:    #F5EDD8;              /* light text for dark sections */
 
-  --ff-head:    'Playfair Display', Georgia, 'Times New Roman', serif;
+  --ff-head:    'DM Sans', system-ui, sans-serif;
   --ff-body:    'Inter', system-ui, sans-serif;
+  --ff-deco:    'Playfair Display', Georgia, serif; /* bakery accents only */
 
   --nav-h:      64px;
   --radius:     14px;
@@ -269,7 +270,7 @@ p  { line-height: 1.7; color: var(--c-muted); }
 }
 
 h1 em {
-  font-style: italic;       /* Playfair italic is gorgeous */
+  font-style: normal;
   color: var(--c-accent);
 }
 
@@ -347,7 +348,6 @@ h1 em {
 .stat-price {
   color: var(--c-accent);
   font-size: 2rem;
-  font-style: italic;
 }
 .stat-div {
   width: 1px;
@@ -410,7 +410,7 @@ h1 em {
 }
 .ticker-track:hover { animation-play-state: paused; }
 .ticker-track span {
-  font-family: var(--ff-head);
+  font-family: var(--ff-deco);  /* Playfair for the marquee banner */
   font-size: .8rem;
   font-weight: 400;
   font-style: italic;
@@ -590,7 +590,7 @@ a.card-preview:hover .preview-hero { opacity: .85; }
   padding: .2rem .6rem;
 }
 
-.card-meta h3 { font-size: 1.05rem; color: var(--c-text); margin-bottom: .4rem; font-style: italic; }
+.card-meta h3 { font-size: 1.05rem; color: var(--c-text); margin-bottom: .4rem; }
 .card-meta p  { font-size: .82rem; line-height: 1.5; margin-bottom: .9rem; }
 
 .palette {
@@ -613,8 +613,6 @@ a.card-preview:hover .preview-hero { opacity: .85; }
   color: var(--c-accent);
   transition: gap .2s, color .2s;
   gap: .25rem;
-  font-style: italic;
-  font-family: var(--ff-head);
 }
 .btn-demo:hover { gap: .5rem; color: #a84317; }
 
@@ -653,9 +651,9 @@ a.card-preview:hover .preview-hero { opacity: .85; }
 }
 
 .step-n {
-  font-family: var(--ff-head);
+  font-family: var(--ff-deco);  /* Playfair for decorative numbers */
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 700;
   font-style: italic;
   display: block;
   margin-bottom: .6rem;
@@ -775,7 +773,7 @@ footer {
 }
 
 .footer-brand { display: flex; align-items: center; gap: .45rem; }
-.footer-brand .logo-name { font-family: var(--ff-head); font-size: 1rem; font-weight: 700; font-style: italic; color: var(--c-cream); }
+.footer-brand .logo-name { font-family: var(--ff-head); font-size: 1rem; font-weight: 700; color: var(--c-cream); }
 
 .footer-copy { font-size: .78rem; color: rgba(245,237,216,.52); }
 
