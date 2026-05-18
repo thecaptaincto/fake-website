@@ -7,7 +7,7 @@
   <meta name="description" content="A Christian community in Montreal seeking God together. Lord's Day meetings in Verdun. Welcome in English, French, and Chinese.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -25,12 +25,12 @@
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="#verse"   data-en="Weekly Verse"  data-fr="Verset de la semaine" data-zh="每周经文">Weekly Verse</a></li>
-        <li><a href="#events"  data-en="Events"         data-fr="Événements"           data-zh="活动">Events</a></li>
-        <li><a href="#life"    data-en="Church Life"    data-fr="Vie d'église"         data-zh="教会生活">Church Life</a></li>
-        <li><a href="#gospel"  data-en="Gospel"         data-fr="Évangile"             data-zh="福音">Gospel</a></li>
-        <li><a href="#about"   data-en="Who We Are"     data-fr="Qui nous sommes"      data-zh="关于我们">Who We Are</a></li>
-        <li><a href="#contact" data-en="Visit Us"       data-fr="Nous rendre visite"   data-zh="来访">Visit Us</a></li>
+        <li><a href="#verse"   data-en="Weekly Verse"  data-fr="Verset"       data-zh="每周经文">Weekly Verse</a></li>
+        <li><a href="#events"  data-en="Events"         data-fr="Événements"   data-zh="活动">Events</a></li>
+        <li><a href="#life"    data-en="Church Life"    data-fr="Vie d'église" data-zh="教会生活">Church Life</a></li>
+        <li><a href="#gospel"  data-en="Gospel"         data-fr="Évangile"     data-zh="福音">Gospel</a></li>
+        <li><a href="#about"   data-en="Who We Are"     data-fr="À propos"     data-zh="关于我们">Who We Are</a></li>
+        <li><a href="#contact" data-en="Visit Us"       data-fr="Visite"       data-zh="来访">Visit Us</a></li>
       </ul>
       <div class="nav-actions">
         <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
@@ -62,6 +62,7 @@
   <header id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
+      <span class="hero-cross-icon" aria-hidden="true">✝</span>
       <p class="eyebrow"
         data-en="Verdun, Montréal"
         data-fr="Verdun, Montréal"
@@ -71,9 +72,9 @@
         data-fr="Chercher Dieu<br>Ensemble"
         data-zh="一起<br>寻求神">Seeking God<br>Together</h1>
       <p class="hero-sub"
-        data-en="A welcoming community of believers in Montreal — gathering to worship, study, and grow in faith."
-        data-fr="Une communauté accueillante de croyants à Montréal — se réunissant pour adorer, étudier et grandir dans la foi."
-        data-zh="蒙特利尔一个温馨的信徒群体——聚集在一起敬拜、学习，并在信仰中成长。">A welcoming community of believers in Montreal — gathering to worship, study, and grow in faith.</p>
+        data-en="A welcoming community of believers in Montreal, gathering to worship, study, and grow in faith."
+        data-fr="Une communauté accueillante de croyants à Montréal, se réunissant pour adorer, étudier et grandir dans la foi."
+        data-zh="蒙特利尔一个温馨的信徒群体，聚集在一起敬拜、学习，并在信仰中成长。">A welcoming community of believers in Montreal, gathering to worship, study, and grow in faith.</p>
       <div class="hero-btns">
         <a href="#events" class="btn-primary"
           data-en="Upcoming Meetings"
@@ -93,14 +94,17 @@
   <!-- WEEKLY VERSE -->
   <section id="verse">
     <div class="container">
+      <span class="verse-ornament" aria-hidden="true">✝</span>
       <p class="section-label"
         data-en="Weekly Verse"
         data-fr="Verset de la semaine"
         data-zh="每周经文">Weekly Verse</p>
+      <div class="verse-rule"></div>
       <blockquote class="verse-quote"
         data-en="&ldquo;But seek first his kingdom and his righteousness, and all these things will be given to you as well. Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own.&rdquo;"
         data-fr="&laquo;&nbsp;Cherchez premièrement le royaume et la justice de Dieu; et toutes ces choses vous seront données par-dessus. Ne vous inquiétez donc pas du lendemain; car le lendemain aura soin de lui-même. À chaque jour suffit sa peine.&nbsp;&raquo;"
         data-zh="「你们要先求他的国和他的义，这些东西都要加给你们了。所以不要为明天忧虑，因为明天自有明天的忧虑；一天的难处一天当就够了。」">&ldquo;But seek first his kingdom and his righteousness, and all these things will be given to you as well. Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own.&rdquo;</blockquote>
+      <div class="verse-rule"></div>
       <cite class="verse-ref">Matthew 6:33–34</cite>
     </div>
   </section>
@@ -178,9 +182,9 @@
         <div class="life-card">
           <div class="life-icon">🎵</div>
           <h3 data-en="Worship &amp; Hymns" data-fr="Adoration et cantiques" data-zh="敬拜与诗歌">Worship &amp; Hymns</h3>
-          <p data-en="Hymns in English, French, and Chinese — lifting our hearts together in praise."
-             data-fr="Des cantiques en anglais, français et chinois — élevant nos cœurs ensemble dans la louange."
-             data-zh="用英语、法语和中文唱诗歌——一同在赞美中举心向上。">Hymns in English, French, and Chinese — lifting our hearts together in praise.</p>
+          <p data-en="Hymns in English, French, and Chinese, lifting our hearts together in praise."
+             data-fr="Des cantiques en anglais, français et chinois, élevant nos cœurs ensemble dans la louange."
+             data-zh="用英语、法语和中文唱诗歌，一同在赞美中举心向上。">Hymns in English, French, and Chinese, lifting our hearts together in praise.</p>
         </div>
 
         <div class="life-card">
@@ -271,9 +275,9 @@
         <div class="study-card">
           <p class="study-book">Galatians</p>
           <p class="study-desc"
-            data-en="A bird's eye view study of Galatians — grace and freedom in Christ."
-            data-fr="Une étude panoramique des Galates — la grâce et la liberté en Christ."
-            data-zh="加拉太书鸟瞰式研习——基督里的恩典与自由。">A bird's eye view study of Galatians — grace and freedom in Christ.</p>
+            data-en="A bird's eye view study of Galatians: grace and freedom in Christ."
+            data-fr="Une étude panoramique des Galates : la grâce et la liberté en Christ."
+            data-zh="加拉太书鸟瞰式研习：基督里的恩典与自由。">A bird's eye view study of Galatians: grace and freedom in Christ.</p>
         </div>
       </div>
     </div>
